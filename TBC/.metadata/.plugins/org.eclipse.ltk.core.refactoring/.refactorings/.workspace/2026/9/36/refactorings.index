@@ -2,3 +2,6 @@
 1788264007991	Rename resource 'EUDPP'
 1788264018851	Rename resource 'Zirkular_X_Base'
 1788264526215	Rename resource 'BuildEnvironent'
+1788271517577	Delete resource '00_EUDPP/eudpp-aggregate.ttl'
+1788271548671	Delete resource '00_EUDPP/test_model.ttl'
+1788271557920	Delete resource '00_EUDPP/unnamed.ttl'
