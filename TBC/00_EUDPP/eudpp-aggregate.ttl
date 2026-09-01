@@ -1,0 +1,33 @@
+# baseURI: https://zirkular-x.tech/ontology/eudpp-aggregate
+# imports: https://w3id.org/eudpp/ACTOR
+# imports: https://w3id.org/eudpp/COMP
+# imports: https://w3id.org/eudpp/CONNECTOR
+# imports: https://w3id.org/eudpp/EVENT
+# imports: https://w3id.org/eudpp/IDENT
+# imports: https://w3id.org/eudpp/LCA
+# imports: https://w3id.org/eudpp/MAT
+# imports: https://w3id.org/eudpp/P_DPP
+# imports: https://w3id.org/eudpp/SOC
+# prefix: eudpp-aggregate
+
+@prefix eudpp: <https://w3id.org/eudpp#> .
+@prefix eudpp-aggregate: <https://zirkular-x.tech/ontology/eudpp-aggregate#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix p1: <http://example.org/file1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://zirkular-x.tech/ontology/eudpp-aggregate>
+  rdf:type owl:Ontology ;
+  owl:imports <https://w3id.org/eudpp/ACTOR> ;
+  owl:imports <https://w3id.org/eudpp/COMP> ;
+  owl:imports <https://w3id.org/eudpp/CONNECTOR> ;
+  owl:imports <https://w3id.org/eudpp/EVENT> ;
+  owl:imports <https://w3id.org/eudpp/IDENT> ;
+  owl:imports <https://w3id.org/eudpp/LCA> ;
+  owl:imports <https://w3id.org/eudpp/MAT> ;
+  owl:imports <https://w3id.org/eudpp/P_DPP> ;
+  owl:imports <https://w3id.org/eudpp/SOC> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
