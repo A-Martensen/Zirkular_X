@@ -1,0 +1,19 @@
+# baseURI: http://example.org/ZXCon
+# imports: https://w3id.org/eudpp/
+# imports: https://zirkular-x.tech/ontology/zxo
+# prefix: ZXCon
+
+@prefix ZXCon: <http://example.org/ZXCon#> .
+@prefix eudpp: <https://w3id.org/eudpp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zxo: <https://zirkular-x.tech/ontology/zxo#> .
+
+<http://example.org/ZXCon>
+  rdf:type owl:Ontology ;
+  owl:imports <https://w3id.org/eudpp/> ;
+  owl:imports <https://zirkular-x.tech/ontology/zxo> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.

@@ -1,0 +1,31 @@
+# baseURI: http://example.org/Aggregation
+# imports: https://w3id.org/eudpp/ACTOR
+# imports: https://w3id.org/eudpp/COMP
+# imports: https://w3id.org/eudpp/CONNECTOR
+# imports: https://w3id.org/eudpp/EVENT
+# imports: https://w3id.org/eudpp/IDENT
+# imports: https://w3id.org/eudpp/P_DPP
+# imports: https://w3id.org/eudpp/SOC
+# imports: https://zirkular-x.tech/ontology/zxo
+# prefix: Aggregation
+
+@prefix Aggregation: <http://example.org/Aggregation#> .
+@prefix ZXO: <https://zirkular-x.tech/ontology/zxo#> .
+@prefix eudpp: <https://w3id.org/eudpp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/Aggregation>
+  rdf:type owl:Ontology ;
+  owl:imports <https://w3id.org/eudpp/ACTOR> ;
+  owl:imports <https://w3id.org/eudpp/COMP> ;
+  owl:imports <https://w3id.org/eudpp/CONNECTOR> ;
+  owl:imports <https://w3id.org/eudpp/EVENT> ;
+  owl:imports <https://w3id.org/eudpp/IDENT> ;
+  owl:imports <https://w3id.org/eudpp/P_DPP> ;
+  owl:imports <https://w3id.org/eudpp/SOC> ;
+  owl:imports <https://zirkular-x.tech/ontology/zxo> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.

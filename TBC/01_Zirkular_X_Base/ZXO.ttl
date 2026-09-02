@@ -1,0 +1,330 @@
+# baseURI: https://zirkular-x.tech/ontology/zxo
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zxo: <https://zirkular-x.tech/ontology/BaseStructure#> .
+
+<https://zirkular-x.tech/ontology/zxo>
+  rdf:type owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+<https://zirkular-x.tech/ontology/zxo#ADPFossil>
+  rdf:type owl:Class ;
+  rdfs:label "Abiotic Depletion Potential, fossil resources"@en ;
+  rdfs:label "Verknappung abiotischer Ressourcen - fossile Energietraeger"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2030" ;
+.
+<https://zirkular-x.tech/ontology/zxo#ADPMineralsMetals>
+  rdf:type owl:Class ;
+  rdfs:label "Abiotic Depletion Potential, minerals and metals"@en ;
+  rdfs:label "Verknappung abiotischer Ressourcen - Mineralien und Metalle"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2030" ;
+.
+<https://zirkular-x.tech/ontology/zxo#AcidificationPotential>
+  rdf:type owl:Class ;
+  rdfs:label "Acidification Potential"@en ;
+  rdfs:label "Versauerung"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2030" ;
+.
+<https://zirkular-x.tech/ontology/zxo#Biodegradability>
+  rdf:type owl:Class ;
+  rdfs:label "05 Biologische Abbaubarkeit"@de ;
+  rdfs:label "Biodegradability"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#CircularityCharacteristic> ;
+.
+<https://zirkular-x.tech/ontology/zxo#BuildingClassification>
+  rdf:type owl:Class ;
+  rdfs:label "Building Classification"@en ;
+  rdfs:label "Klassifikation"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#BuildingInfo> ;
+.
+<https://zirkular-x.tech/ontology/zxo#BuildingInfo>
+  rdf:type owl:Class ;
+  rdfs:label "Building Information"@en ;
+  rdfs:label "Gebaeude"@de ;
+  rdfs:subClassOf owl:Thing ;
+.
+<https://zirkular-x.tech/ontology/zxo#BuildingType>
+  rdf:type owl:Class ;
+  rdfs:label "Building Type"@en ;
+  rdfs:label "Gebaeudetyp"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#BuildingInfo> ;
+.
+<https://zirkular-x.tech/ontology/zxo#CircularityCharacteristic>
+  rdf:type owl:Class ;
+  rdfs:label "Circularity Characteristic"@en ;
+  rdfs:label "Zirkulaere Eigenschaft"@de ;
+  rdfs:subClassOf owl:Thing ;
+.
+<https://zirkular-x.tech/ontology/zxo#CompatibilityInformation>
+  rdf:type owl:Class ;
+  rdfs:label "Compatibility Information"@en ;
+  rdfs:label "Kompatibilitaet"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#ProductDocumentation> ;
+.
+<https://zirkular-x.tech/ontology/zxo#Disassemblability>
+  rdf:type owl:Class ;
+  rdfs:label "06 Demontage"@de ;
+  rdfs:label "Disassemblability"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#CircularityCharacteristic> ;
+.
+<https://zirkular-x.tech/ontology/zxo#Durability>
+  rdf:type owl:Class ;
+  rdfs:label "08 Langlebigkeit"@de ;
+  rdfs:label "Durability"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#CircularityCharacteristic> ;
+.
+<https://zirkular-x.tech/ontology/zxo#EPFreshwater>
+  rdf:type owl:Class ;
+  rdfs:label "Eutrophication Potential, freshwater"@en ;
+  rdfs:label "Eutrophierung Suesswasser"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2030" ;
+.
+<https://zirkular-x.tech/ontology/zxo#EPMarine>
+  rdf:type owl:Class ;
+  rdfs:label "Eutrophication Potential, marine"@en ;
+  rdfs:label "Eutrophierung Salzwasser"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2030" ;
+.
+<https://zirkular-x.tech/ontology/zxo#EPTerrestrial>
+  rdf:type owl:Class ;
+  rdfs:label "Eutrophication Potential, terrestrial"@en ;
+  rdfs:label "Eutrophierung Land"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2030" ;
+.
+<https://zirkular-x.tech/ontology/zxo#EcotoxicityFreshwater>
+  rdf:type owl:Class ;
+  rdfs:label "Ecotoxicity, freshwater"@en ;
+  rdfs:label "Oekotoxizitaet, Suesswasser"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2032" ;
+.
+<https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator>
+  rdf:type owl:Class ;
+  rdfs:comment "Core environmental impact indicator according to EN 15804+A2."@en ;
+  rdfs:label "Environmental Impact Indicator"@en ;
+  rdfs:label "Oekobilanzindikator"@de ;
+  rdfs:subClassOf owl:Thing ;
+.
+<https://zirkular-x.tech/ontology/zxo#GWPBiogenic>
+  rdf:type owl:Class ;
+  rdfs:label "GWP biogen"@de ;
+  rdfs:label "Global Warming Potential, biogenic"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2026" ;
+.
+<https://zirkular-x.tech/ontology/zxo#GWPFossil>
+  rdf:type owl:Class ;
+  rdfs:label "GWP fossil"@de ;
+  rdfs:label "Global Warming Potential, fossil"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2026" ;
+.
+<https://zirkular-x.tech/ontology/zxo#GWPLULUC>
+  rdf:type owl:Class ;
+  rdfs:label "GWP luluc"@de ;
+  rdfs:label "Global Warming Potential, land use and land use change"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2026" ;
+.
+<https://zirkular-x.tech/ontology/zxo#GWPTotal>
+  rdf:type owl:Class ;
+  rdfs:label "GWP total"@de ;
+  rdfs:label "Global Warming Potential, total"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2026" ;
+.
+<https://zirkular-x.tech/ontology/zxo#HazardousSubstanceContent>
+  rdf:type owl:Class ;
+  rdfs:label "01 Enthaltene Gefahrstoffe"@de ;
+  rdfs:label "Hazardous Substance Content"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#CircularityCharacteristic> ;
+.
+<https://zirkular-x.tech/ontology/zxo#HumanToxicityCancer>
+  rdf:type owl:Class ;
+  rdfs:label "Human Toxicity, cancer effects"@en ;
+  rdfs:label "Humantoxizitaet, kanzerogene Wirkungen"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2032" ;
+.
+<https://zirkular-x.tech/ontology/zxo#HumanToxicityNonCancer>
+  rdf:type owl:Class ;
+  rdfs:label "Human Toxicity, non-cancer effects"@en ;
+  rdfs:label "Humantoxizitaet, nicht kanzerogene Wirkungen"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2032" ;
+.
+<https://zirkular-x.tech/ontology/zxo#InstallationInstructions>
+  rdf:type owl:Class ;
+  rdfs:label "Installation Instructions"@en ;
+  rdfs:label "Montage-/Installationsanweisungen"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#ProductDocumentation> ;
+.
+<https://zirkular-x.tech/ontology/zxo#InstallationLocation>
+  rdf:type owl:Class ;
+  rdfs:comment "Ort des Einbaus, je nach Datenlage auf Gebaeude- oder Raumebene."@de ;
+  rdfs:label "Einbauort"@de ;
+  rdfs:label "Installation Location"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#BuildingInfo> ;
+.
+<https://zirkular-x.tech/ontology/zxo#InstructionsForUse>
+  rdf:type owl:Class ;
+  rdfs:label "Gebrauchsanweisungen"@de ;
+  rdfs:label "Instructions for Use"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#ProductDocumentation> ;
+.
+<https://zirkular-x.tech/ontology/zxo#IonisingRadiation>
+  rdf:type owl:Class ;
+  rdfs:label "Ionising Radiation, human health"@en ;
+  rdfs:label "ionisierende Strahlung menschliche Gefahr"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2032" ;
+.
+<https://zirkular-x.tech/ontology/zxo#LandUse>
+  rdf:type owl:Class ;
+  rdfs:label "Land Use Related Impacts / Soil Quality"@en ;
+  rdfs:label "mit der Landnutzung verbundene Wirkungen"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2032" ;
+.
+<https://zirkular-x.tech/ontology/zxo#Maintainability>
+  rdf:type owl:Class ;
+  rdfs:label "03 Wartungs- und Reparaturfaehigkeit"@de ;
+  rdfs:label "Maintainability and Repairability"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#CircularityCharacteristic> ;
+.
+<https://zirkular-x.tech/ontology/zxo#MaintenanceInstructions>
+  rdf:type owl:Class ;
+  rdfs:label "Maintenance Instructions"@en ;
+  rdfs:label "Wartungsanweisungen"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#ProductDocumentation> ;
+.
+<https://zirkular-x.tech/ontology/zxo#MaterialComposition>
+  rdf:type owl:Class ;
+  rdfs:label "Material Information"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#MaterialInfo> ;
+.
+<https://zirkular-x.tech/ontology/zxo#MaterialInfo>
+  rdf:type owl:Class ;
+  rdfs:label "Material Information"@de ;
+  rdfs:subClassOf owl:Thing ;
+.
+<https://zirkular-x.tech/ontology/zxo#MaterialRecoverability>
+  rdf:type owl:Class ;
+  rdfs:label "Material Information"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#MaterialInfo> ;
+.
+<https://zirkular-x.tech/ontology/zxo#ODP>
+  rdf:type owl:Class ;
+  rdfs:label "Ozonabbaupotential"@de ;
+  rdfs:label "Ozone Depletion Potential"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2030" ;
+.
+<https://zirkular-x.tech/ontology/zxo#POCP>
+  rdf:type owl:Class ;
+  rdfs:label "Photochemical Ozone Creation Potential"@en ;
+  rdfs:label "photochemische Ozonbildung"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2030" ;
+.
+<https://zirkular-x.tech/ontology/zxo#ParticulateMatter>
+  rdf:type owl:Class ;
+  rdfs:label "Feinstaubemissionen"@de ;
+  rdfs:label "Particulate Matter Emissions"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2032" ;
+.
+<https://zirkular-x.tech/ontology/zxo#ProductDescription>
+  rdf:type owl:Class ;
+  rdfs:label "Bauprodukt Hersteller"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#ProductInformation> ;
+.
+<https://zirkular-x.tech/ontology/zxo#ProductDocumentation>
+  rdf:type owl:Class ;
+  rdfs:label "Product Documentation"@en ;
+  rdfs:label "Produktdokumentation"@de ;
+  rdfs:subClassOf owl:Thing ;
+.
+<https://zirkular-x.tech/ontology/zxo#ProductIdentificator>
+  rdf:type owl:Class ;
+  rdfs:label "Bauprodukt Hersteller"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#ProductInformation> ;
+.
+<https://zirkular-x.tech/ontology/zxo#ProductInformation>
+  rdf:type owl:Class ;
+  rdfs:label "Bauprodukt Hersteller"@de ;
+  rdfs:subClassOf owl:Thing ;
+.
+<https://zirkular-x.tech/ontology/zxo#ProductProducer>
+  rdf:type owl:Class ;
+  rdfs:label "Bauprodukt Hersteller"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#ProductInformation> ;
+.
+<https://zirkular-x.tech/ontology/zxo#RecycledContent>
+  rdf:type owl:Class ;
+  rdfs:label "02 Rezyklatanteil"@de ;
+  rdfs:label "Recycled Content"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#CircularityCharacteristic> ;
+.
+<https://zirkular-x.tech/ontology/zxo#RenewableContent>
+  rdf:type owl:Class ;
+  rdfs:label "05 Anteil nachwachsender Rohstoffe"@de ;
+  rdfs:label "Renewable Material Content"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#CircularityCharacteristic> ;
+.
+<https://zirkular-x.tech/ontology/zxo#Repurposability>
+  rdf:type owl:Class ;
+  rdfs:label "9.1 Weiterverwendung"@de ;
+  rdfs:label "Repurposability"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#CircularityCharacteristic> ;
+.
+<https://zirkular-x.tech/ontology/zxo#Reusability>
+  rdf:type owl:Class ;
+  rdfs:label "09 Wiederverwendbarkeit"@de ;
+  rdfs:label "Reusability"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#CircularityCharacteristic> ;
+.
+<https://zirkular-x.tech/ontology/zxo#ReusedContent>
+  rdf:type owl:Class ;
+  rdfs:label "10 Wiederverwendung / Weiterverwendung"@de ;
+  rdfs:label "Reused Content"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#CircularityCharacteristic> ;
+.
+<https://zirkular-x.tech/ontology/zxo#SafetyInformation>
+  rdf:type owl:Class ;
+  rdfs:label "Safety Information"@en ;
+  rdfs:label "Sicherheitshinweise"@de ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#ProductDocumentation> ;
+.
+<https://zirkular-x.tech/ontology/zxo#Separability>
+  rdf:type owl:Class ;
+  rdfs:label "07 Trennbarkeit / Recyclingfaehigkeit"@de ;
+  rdfs:label "Separability and Recyclability"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#CircularityCharacteristic> ;
+.
+<https://zirkular-x.tech/ontology/zxo#WaterUse>
+  rdf:type owl:Class ;
+  rdfs:label "Wassernutzung"@de ;
+  rdfs:label "Water Use"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#EnvironmentalImpactIndicator> ;
+  <https://zirkular-x.tech/ontology/zxo#mandatoryFrom> "2030" ;
+.
+<https://zirkular-x.tech/ontology/zxo#YearOfConstruction>
+  rdf:type owl:Class ;
+  rdfs:label "Baujahr"@de ;
+  rdfs:label "Year of Construction"@en ;
+  rdfs:subClassOf <https://zirkular-x.tech/ontology/zxo#BuildingInfo> ;
+.
+<https://zirkular-x.tech/ontology/zxo#mandatoryFrom>
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "mandatory from"@en ;
+.
