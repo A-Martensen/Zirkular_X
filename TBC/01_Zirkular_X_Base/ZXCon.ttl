@@ -17,3 +17,14 @@
   owl:imports <https://zirkular-x.tech/ontology/zxo> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
+ZXCon:hasBuildingProduct
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain eudpp:Product ;
+  rdfs:range zxo:BuildingProduct ;
+.
+zxo:BuildingProduct
+  rdfs:subClassOf eudpp:Product ;
+.
+zxo:Manufacturer
+  rdfs:subClassOf eudpp:LegalPerson ;
+.
