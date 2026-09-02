@@ -1689,7 +1689,7 @@
 ///TopBraid/TBC/xhtml.ttl=true
 ///TopBraid/VERSION=true
 //SelectedResourcehttp\://example.org/Aggregation=http\://example.org/Aggregation
-//SelectedResourcehttp\://example.org/ZXCon=http\://example.org/ZXCon
+//SelectedResourcehttp\://example.org/ZXCon=https\://w3id.org/eudpp\#Actor
 //SelectedResourcehttp\://example.org/unnamed=http\://example.org/unnamed
 //SelectedResourcehttps\://pi.pauwel.be/voc/buildingelement=https\://pi.pauwel.be/voc/buildingelement
 //SelectedResourcehttps\://saref.etsi.org/core/=https\://saref.etsi.org/core/
@@ -1703,10 +1703,11 @@
 //SelectedResourcehttps\://w3id.org/eudpp/EVENT=https\://w3id.org/eudpp/EVENT
 //SelectedResourcehttps\://w3id.org/eudpp/IDENT=https\://w3id.org/eudpp\#SoCIdentifier
 //SelectedResourcehttps\://w3id.org/eudpp/MAT=https\://w3id.org/eudpp\#MaterialOfComposition
-//SelectedResourcehttps\://w3id.org/eudpp/P_DPP=https\://w3id.org/eudpp\#dictionaryReference
-//SelectedResourcehttps\://w3id.org/eudpp/SOC=https\://w3id.org/eudpp/SOC
-//SelectedResourcehttps\://zirkular-x.tech/ontology/BaseStructure=https\://zirkular-x.tech/ontology/BaseStructure\#YearOfConstruction
+//SelectedResourcehttps\://w3id.org/eudpp/P_DPP=https\://w3id.org/eudpp\#Property
+//SelectedResourcehttps\://w3id.org/eudpp/SOC=https\://w3id.org/eudpp\#Substance
+//SelectedResourcehttps\://zirkular-x.tech/ontology/BaseStructure=https\://zirkular-x.tech/ontology/BaseStructure
 //SelectedResourcehttps\://zirkular-x.tech/ontology/test_model=https\://zirkular-x.tech/ontology/test_model
+//SelectedResourcehttps\://zirkular-x.tech/ontology/zxo=https\://zirkular-x.tech/ontology/zxo\#hasManufacturer
 //Show-http_//www.w3.org/2002/07/owl\#AllDisjointClasses=true
 //Show-http_//www.w3.org/2002/07/owl\#NamedIndividual=true
 eclipse.preferences.version=1
