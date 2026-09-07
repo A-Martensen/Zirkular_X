@@ -1,0 +1,154 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns0: <http://purl.org/vocab/vann#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/eudpp/MAT>
+  a owl:Ontology ;
+  dcterms:contributor "Riina Maigre"@en ;
+  dcterms:created "2026-04-10"@en ;
+  dcterms:creator "Tarmo Robal"@en ;
+  dcterms:description """MODULE: MATERIAL
+Material module of the  EU DPP core ontology proposal of the CIRPASS-2 European project.
+
+DEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology (CO) modules: CON, P_DPP, SOC.  
+
+Under the ESPR, products must disclose what materials they contain, where those materials come from, whether they include substances of concern, and how those materials support durability, repairability, recyclability, and circularity.
+The main requiremetns regarding materials are given in ESPR Annex I. 
+
+===============
+v.1.0.2
+ - linking MAT to IDENT for material identifier and its scheme.
+ - #materialIdentifier and #materialIdentifierScheme become OBSOLETE.
+
+v.1.0.1 
+ - Initial version
+
+--
+THIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. 
+All liability for any damages arising from use or misuse of this vocabulary is with the user."""@en ;
+  dcterms:issued "2026-04-28"@en ;
+  dcterms:licence <https://www.apache.org/licenses/LICENSE-2.0>, """This ontology is licensed under the Apache License, Version 2.0. 
+In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."""@en ;
+  dcterms:title "The Materials (MAT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project."@en ;
+  ns0:preferredNamespacePrefix "mat" ;
+  rdfs:comment "First iteration of the Material module of the EU DPP core ontology proposal of the CIRPASS-2 European project."@en ;
+  rdfs:label "EU DPP MAT"@en ;
+  owl:versionInfo "1.0.2" .
+
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:created a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:identifier a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:licence a owl:AnnotationProperty .
+dcterms:references a owl:AnnotationProperty .
+dcterms:source a owl:AnnotationProperty .
+dcterms:title a owl:AnnotationProperty .
+ns0:preferredNamespacePrefix a owl:AnnotationProperty .
+<https://w3id.org/eudpp#isMandatory> a owl:AnnotationProperty .
+xsd:date a rdfs:Datatype .
+<https://w3id.org/eudpp#hasMaterialOrigin>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/eudpp#MaterialOfComposition> ;
+  rdfs:range <https://w3id.org/eudpp#MaterialOrigin> ;
+  rdfs:comment "Assigns material origin to material used for product"@en ;
+  rdfs:label "Has material origin"@en .
+
+<https://w3id.org/eudpp#hasMaterialType>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/eudpp#MaterialOfComposition> ;
+  rdfs:range <https://w3id.org/eudpp#MaterialType> ;
+  rdfs:comment "Links material to its type in some classification system used by the sector."@en ;
+  rdfs:label "Has material type"@en .
+
+<https://w3id.org/eudpp#isCriticalRawMaterial>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://w3id.org/eudpp#MaterialOfComposition> ;
+  rdfs:range xsd:boolean ;
+  dcterms:references "[ESPR Annex I h)]"@en ;
+  dcterms:source "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+  rdfs:comment "Product parameters: use or content of recycled materials and recovery of materials, including critical raw materials; [ESPR Annex I h)]"@en ;
+  rdfs:label "Critical raw material"@en .
+
+<https://w3id.org/eudpp#materialComponent>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://w3id.org/eudpp#MaterialOfComposition> ;
+  rdfs:range xsd:string ;
+  rdfs:comment """The specific part of the Product this material belongs to. Description. 
+For example, in case of a textile product: [Main, Lining, Filling]."""@en ;
+  rdfs:label "Part of product material is in"@en .
+
+<https://w3id.org/eudpp#materialIsRecyclable>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://w3id.org/eudpp#MaterialOfComposition> ;
+  rdfs:range xsd:boolean ;
+  dcterms:references "ESPR Art 5 (1n), Annex I d)"@en ;
+  dcterms:source "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+  rdfs:comment "Product parameters: design for recycling, ease and quality of recycling as expressed through use of easily recyclable materials [ESPR Art 5 (1n), Annex I d)]"@en ;
+  rdfs:label "Recyclable material"@en .
+
+<https://w3id.org/eudpp#materialIsSustainableRenewable>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://w3id.org/eudpp#MaterialOfComposition> ;
+  rdfs:range xsd:boolean ;
+  dcterms:references "ESPR Annex I i)"@en ;
+  dcterms:source "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+  rdfs:comment "Product parameters: use or content of sustainable renewable materials; [ESPR Annex I i)]"@en ;
+  rdfs:label "Sustainale or renewable material"@en .
+
+<https://w3id.org/eudpp#materialPercentage>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://w3id.org/eudpp#MaterialOfComposition> ;
+  rdfs:range xsd:decimal ;
+  rdfs:comment "Material percentage in a Product, e.g., mass fraction (percentage by weight)."@en ;
+  rdfs:label "Material percentage"@en .
+
+<https://w3id.org/eudpp#materialRecycledContent>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://w3id.org/eudpp#MaterialOfComposition> ;
+  rdfs:range xsd:decimal ;
+  rdfs:comment "Percentage of recycled content"@en ;
+  rdfs:label "Recycled content amount in material"@en .
+
+<https://w3id.org/eudpp#MaterialOfComposition>
+  a owl:Class ;
+  rdfs:comment "Material the product (or component) is made of [ESPR Annex I]. Material as an element of composition."@en ;
+  rdfs:label "Material of composition"@en .
+
+<https://w3id.org/eudpp#MaterialOrigin>
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:oneOf (
+     <https://w3id.org/eudpp#raw>
+     <https://w3id.org/eudpp#recycled>
+     <https://w3id.org/eudpp#renewable>
+   )
+  ] ;
+  dcterms:references "[ESPR Annex I]"@en ;
+  dcterms:source "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+  rdfs:comment "Origin of the material used in product [ESPR Annex I]"@en ;
+  rdfs:label "Origin of material"@en .
+
+<https://w3id.org/eudpp#MaterialType>
+  a owl:Class ;
+  rdfs:comment """Placeholder class for material type classification applicable in a sector or mandated by a delegated act (DA).
+
+Potential types could be, on the example of textile sector: cotton, nylon, ..."""@en ;
+  rdfs:label "Material type"@en .
+
+<https://w3id.org/eudpp#raw>
+  a owl:NamedIndividual, <https://w3id.org/eudpp#MaterialOrigin> ;
+  rdfs:comment "Raw material" .
+
+<https://w3id.org/eudpp#recycled>
+  a owl:NamedIndividual, <https://w3id.org/eudpp#MaterialOrigin> ;
+  rdfs:comment "Recycled material" .
+
+<https://w3id.org/eudpp#renewable>
+  a owl:NamedIndividual, <https://w3id.org/eudpp#MaterialOrigin> ;
+  rdfs:comment "Renewable material" .
+

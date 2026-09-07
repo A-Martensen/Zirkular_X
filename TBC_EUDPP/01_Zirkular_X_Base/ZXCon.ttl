@@ -1,0 +1,28 @@
+# baseURI: https://zirkular-x.tech/ontology/ZXCon
+# imports: https://w3id.org/eudpp/
+# imports: https://zirkular-x.tech/ontology/ZXO
+# prefix: zxcon
+
+@prefix eudpp: <https://w3id.org/eudpp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zxcon: <https://zirkular-x.tech/ontology/ZXCon#> .
+@prefix zxo: <https://zirkular-x.tech/ontology/ZXO#> .
+
+<https://zirkular-x.tech/ontology/ZXCon>
+  rdf:type owl:Ontology ;
+  owl:imports <https://w3id.org/eudpp/> ;
+  owl:imports <https://zirkular-x.tech/ontology/ZXO> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+zxo:BuildingProduct
+  rdfs:subClassOf eudpp:Product ;
+.
+zxo:hasProductionLocation
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:label "Herstllungsort des Produktes "@de ;
+  rdfs:range <https://schema.org/PostalAddress> ;
+.

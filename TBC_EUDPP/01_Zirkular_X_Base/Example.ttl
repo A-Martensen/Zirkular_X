@@ -1,0 +1,152 @@
+# baseURI: https://zirkular-x.tech/ontology/Example
+# imports: https://zirkular-x.tech/ontology/EUDPP_EXT
+# prefix: Example
+
+@prefix Example: <https://zirkular-x.tech/ontology/Example#> .
+@prefix eudpp: <https://w3id.org/eudpp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zxo: <https://zirkular-x.tech/ontology/ZXO#> .
+
+<https://zirkular-x.tech/ontology/Example>
+  rdf:type owl:Ontology ;
+  owl:imports <https://zirkular-x.tech/ontology/EUDPP_EXT> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+Example:Beispiel2_Gebäude
+  rdf:type zxo:Building ;
+  zxo:hasBuildingClassification zxo:bueroUndVerwaltung ;
+  zxo:hasBuildingID "GEB-ZENTRALE-01" ;
+.
+Example:Beispiel2_Height
+  rdf:type eudpp:Height ;
+  eudpp:hasMeasurementUnit zxo:millimetre ;
+  eudpp:numericalValue "1800"^^xsd:decimal ;
+.
+Example:Beispiel2_Hersteller
+  rdf:type eudpp:LegalPerson ;
+  eudpp:actorName "TROX GmbH" ;
+  eudpp:registeredTradeName "TROX GmbH" ;
+.
+Example:Beispiel2_HerstellungsAdresse
+  rdf:type <https://schema.org/PostalAddress> ;
+  <https://schema.org/addressCountry> "DE" ;
+  <https://schema.org/addressLocality> "Musterstadt" ;
+  <https://schema.org/postalCode> "12345" ;
+  <https://schema.org/streetAddress> "Musterstr. 1" ;
+.
+Example:Beispiel2_Identifier
+  rdf:type eudpp:ProductIdentifier ;
+  eudpp:hasGranularity eudpp:item ;
+  eudpp:identifierValue "X-AIR-12.5-A-08-11942" ;
+.
+Example:Beispiel2_Lueftung
+  rdf:type zxo:BuildingProduct ;
+  eudpp:hasUniqueProductIdentifier Example:Beispiel2_Identifier ;
+  eudpp:productName "X-CUBE" ;
+  zxo:estimatedMinLifespan 20 ;
+  zxo:hasIntendedUserGroup zxo:unterwiesenePerson ;
+  zxo:hasKG 431 ;
+  zxo:hasMaterialComposition Example:MaterialComposition_1 ;
+  zxo:hasPVOCode "123abc" ;
+  zxo:hasProductionDate "2015-04-12"^^xsd:date ;
+  zxo:hasProductionLocation Example:Beispiel2_HerstellungsAdresse ;
+  zxo:hasUsageConditions """ Betriebstemperatur
+- Werte von -30°C bis +50°C
+- DIN EN 13053 (Leistungsmerkmale von RLT-Geräten)""" ;
+  zxo:isInstalledInBuilding Example:Beispiel2_Gebäude ;
+.
+Example:Beispiel2_Material_aluminium
+  rdf:type zxo:Material ;
+  rdfs:comment "Verbaut in Rahmenprofilen und Rotorstruktur."@de ;
+  zxo:hasMaterialMassPercentage "14"^^xsd:decimal ;
+  zxo:hasMaterialName "Aluminium" ;
+.
+Example:Beispiel2_Material_elektronik
+  rdf:type zxo:Material ;
+  rdfs:comment "Verbaut in Motoren und Umrichtern."@de ;
+  zxo:hasMaterialMassPercentage "2"^^xsd:decimal ;
+  zxo:hasMaterialName "Elektronik / Leistungshalbleiter" ;
+.
+Example:Beispiel2_Material_kunststoffe
+  rdf:type zxo:Material ;
+  rdfs:comment "Verbaut in Dichtungen, Filterrahmen und Griffen."@de ;
+  zxo:hasMaterialMassPercentage "4"^^xsd:decimal ;
+  zxo:hasMaterialName "Kunststoffe/Elastomere" ;
+.
+Example:Beispiel2_Material_kupfer
+  rdf:type zxo:Material ;
+  rdfs:comment "Verbaut in Registerrohren."@de ;
+  zxo:hasMaterialMassPercentage "3"^^xsd:decimal ;
+  zxo:hasMaterialName "Kupfer" ;
+.
+Example:Beispiel2_Material_mineralwolle
+  rdf:type zxo:Material ;
+  rdfs:comment "Gehaeusedaemmung, nicht brennbar, 50 mm Wandstaerke."@de ;
+  zxo:hasMaterialMassPercentage "9"^^xsd:decimal ;
+  zxo:hasMaterialName "Mineralwolle" ;
+.
+Example:Beispiel2_Material_stahlblech
+  rdf:type zxo:Material ;
+  rdfs:comment "Pulverbeschichtet. Verbaut in Gehaeusewaenden."@de ;
+  zxo:hasMaterialMassPercentage "68"^^xsd:decimal ;
+  zxo:hasMaterialName "Verzinktes Stahlblech" ;
+.
+Example:Beispiel2_Weight
+  rdf:type eudpp:Weight ;
+  eudpp:hasMeasurementUnit zxo:kilogram ;
+  eudpp:numericalValue "2500"^^xsd:decimal ;
+.
+Example:Beispiel2_Witdth
+  rdf:type eudpp:Width ;
+  eudpp:hasMeasurementUnit zxo:millimetre ;
+  eudpp:numericalValue "1600"^^xsd:decimal ;
+.
+Example:Bespiel2_HerstellerAdresse
+  rdf:type <http://purl.org/dc/terms#Location> ;
+.
+Example:Bespiel2_Length
+  rdf:type eudpp:Length ;
+  eudpp:hasMeasurementUnit zxo:millimetre ;
+  eudpp:numericalValue "1600"^^xsd:decimal ;
+.
+Example:MaterialComposition_1
+  rdf:type zxo:MaterialComposition ;
+  zxo:isPartOfMaterialCompositions Example:Beispiel2_Material_aluminium ;
+  zxo:isPartOfMaterialCompositions Example:Beispiel2_Material_elektronik ;
+  zxo:isPartOfMaterialCompositions Example:Beispiel2_Material_kunststoffe ;
+  zxo:isPartOfMaterialCompositions Example:Beispiel2_Material_kupfer ;
+  zxo:isPartOfMaterialCompositions Example:Beispiel2_Material_mineralwolle ;
+  zxo:isPartOfMaterialCompositions Example:Beispiel2_Material_stahlblech ;
+.
+zxo:Beispiel2_RLT_Anlage
+  zxo:hasSubSystemID "RLT-Anlage 01" ;
+.
+zxo:Beispiel2_RM_401
+  zxo:hasRoomID "RM 401" ;
+.
+zxo:hasMaterialComposition
+  rdf:type rdf:Property ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range zxo:MaterialComposition ;
+.
+zxo:hasUsageConditions
+  rdfs:domain zxo:BuildingProduct ;
+.
+zxo:kilogram
+  rdf:type owl:NamedIndividual ;
+  rdf:type <https://si-digital-framework.org/SI#MeasurementUnit> ;
+  rdfs:comment "SI-Basiseinheit der Masse. Symbol kg."@de ;
+  rdfs:label "Kilogramm"@de ;
+  rdfs:label "kilogram"@en ;
+.
+zxo:millimetre
+  rdf:type owl:NamedIndividual ;
+  rdf:type <https://si-digital-framework.org/SI#MeasurementUnit> ;
+  rdfs:comment "Ein Tausendstel Meter. Symbol mm."@de ;
+  rdfs:label "Millimeter"@de ;
+  rdfs:label "millimetre"@en ;
+.
