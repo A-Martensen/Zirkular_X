@@ -1,0 +1,36 @@
+@prefix ZXO: <http://www.owl-ontologies.com/ZXO#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ZXO: a owl:Ontology ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+ZXO:Height a owl:Class ;
+    rdfs:label "Height" .
+
+ZXO:Identification a owl:Class ;
+    rdfs:label "Identification" ;
+    rdfs:subClassOf ZXO:ProductInformation .
+
+ZXO:Width a owl:Class ;
+    rdfs:label "Width" ;
+    rdfs:subClassOf ZXO:QuantitativeDescription .
+
+ZXO:hasValue a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has value" ;
+    rdfs:range xsd:double .
+
+ZXO:ProductDescription a owl:Class ;
+    rdfs:label "Product Description" ;
+    rdfs:subClassOf ZXO:ProductInformation .
+
+ZXO:QuantitativeDescription a owl:Class ;
+    rdfs:label "Quantitative Description" ;
+    rdfs:subClassOf ZXO:ProductDescription .
+
+ZXO:ProductInformation a owl:Class ;
+    rdfs:label "Product Information" .
+

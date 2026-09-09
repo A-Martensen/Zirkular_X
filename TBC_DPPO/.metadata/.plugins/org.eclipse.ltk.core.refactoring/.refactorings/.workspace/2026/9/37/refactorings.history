@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;tst/ontology(3).ttl&apos;" deleteContents="false" description="Delete resource &apos;tst/ontology(3).ttl&apos;" element1="/tst/ontology(3).ttl" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1788818588969"/>
+</session>

@@ -1,0 +1,86 @@
+@prefix zx:      <https://zirkular-x.tech/ontology/p1#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://zirkular-x.tech/ontology/p1> a owl:Ontology ;
+    dcterms:title "P1 indicator value pattern"@en ;
+    rdfs:comment "Entwurfsmodul zum Muster 'typisierter Wert'. Deckt CQ-1.10 bis 1.13, 5.1 bis 5.13, 7.4 bis 7.10, 8.2 ab."@de ;
+    owl:versionInfo "0.1.0-draft" .
+
+##  Klassen  ############################################################
+
+zx:Product a owl:Class ;
+    rdfs:label "Product"@en , "Produkt"@de ;
+    rdfs:comment "Platzhalter. Wird beim Reuse gegen DPPO bzw. eudpp ersetzt."@de .
+
+zx:Indicator a owl:Class ;
+    rdfs:label "Indicator"@en , "Indikator"@de ;
+    rdfs:comment "Messbare Groesse. Instanzen sind GWP total, Nennleistung usw. Reuse-Kandidat: bSDD, ISOProps."@de .
+
+zx:IndicatorValue a owl:Class ;
+    rdfs:label "Indicator value"@en , "Indikatorwert"@de ;
+    rdfs:comment "Reifizierter Wert: traegt Zahl, Einheit und Geltungsbereich."@de .
+
+zx:Unit a owl:Class ;
+    rdfs:label "Unit"@en , "Einheit"@de ;
+    rdfs:comment "Platzhalter. Reuse-Kandidat: qudt:Unit."@de .
+
+zx:LifeCycleModule a owl:Class ;
+    rdfs:label "Life cycle module"@en , "Lebenszyklusmodul"@de ;
+    rdfs:comment "Geltungsbereich nach EN 15804, z. B. A1-A3, C3, D."@de .
+
+zx:DeclaredUnit a owl:Class ;
+    rdfs:label "Declared unit"@en , "Bezugseinheit"@de ;
+    rdfs:comment "Bezugsgroesse eines Oekobilanzwerts, z. B. 1 Stueck, 1 kg."@de .
+
+##  Object properties  ##################################################
+
+zx:hasIndicatorValue a owl:ObjectProperty ;
+    rdfs:label "has indicator value"@en , "hat Indikatorwert"@de ;
+    rdfs:domain zx:Product ;
+    rdfs:range  zx:IndicatorValue .
+
+zx:forIndicator a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "for indicator"@en , "betrifft Indikator"@de ;
+    rdfs:domain zx:IndicatorValue ;
+    rdfs:range  zx:Indicator .
+
+zx:hasUnit a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "has unit"@en , "hat Einheit"@de ;
+    rdfs:domain zx:IndicatorValue ;
+    rdfs:range  zx:Unit .
+
+zx:appliesToModule a owl:ObjectProperty ;
+    rdfs:label "applies to module"@en , "gilt fuer Modul"@de ;
+    rdfs:domain zx:IndicatorValue ;
+    rdfs:range  zx:LifeCycleModule ;
+    rdfs:comment "Nicht funktional: ein Wert kann fuer mehrere Module gelten, z. B. A1-A3 zusammengefasst."@de .
+
+zx:hasDeclaredUnit a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "has declared unit"@en , "hat Bezugseinheit"@de ;
+    rdfs:domain zx:IndicatorValue ;
+    rdfs:range  zx:DeclaredUnit .
+
+##  Datatype properties  ################################################
+
+zx:numericValue a owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "numeric value"@en , "Zahlenwert"@de ;
+    rdfs:domain zx:IndicatorValue ;
+    rdfs:range  xsd:decimal .
+
+##  Kontrollierte Vokabulare (SKOS, damit erweiterbar ohne TBox-Aenderung)
+
+zx:EnvironmentalIndicator a owl:Class ;
+    rdfs:subClassOf zx:Indicator ;
+    rdfs:label "Environmental indicator"@en , "Umweltindikator"@de .
+
+zx:TechnicalIndicator a owl:Class ;
+    rdfs:subClassOf zx:Indicator ;
+    rdfs:label "Technical indicator"@en , "Technischer Indikator"@de .
+
+zx:PhysicalIndicator a owl:Class ;
+    rdfs:subClassOf zx:Indicator ;
+    rdfs:label "Physical indicator"@en , "Physikalischer Indikator"@de .

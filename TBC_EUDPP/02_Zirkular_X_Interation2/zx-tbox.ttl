@@ -1,0 +1,152 @@
+@prefix zx:      <https://zirkular-x.tech/ontology/zx#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://zirkular-x.tech/ontology/zx> a owl:Ontology ;
+    dcterms:title   "ZIRKULAR-X DPP core, Iteration 1"@en ;
+    rdfs:comment    "Muster P1 (typisierter Wert) und P2 (Materialanteil), dazu flache Klassifikationsangaben. Deckt CQ-1.2 bis 1.4, 1.10 bis 1.14, 2.1 bis 2.8, 5.1 bis 5.13, 7.2, 7.4 bis 7.10, 8.2 ab."@de ;
+    owl:versionInfo "0.2.0-draft" .
+
+################################################################
+##  Gemeinsame Oberklasse fuer alle Wertknoten
+################################################################
+
+zx:QuantityValue a owl:Class ;
+    rdfs:label   "Quantity value"@en , "Mengenangabe"@de ;
+    rdfs:comment "Reifizierter Wert. Traegt Zahl und Einheit; Unterklassen ergaenzen Bezugspunkt und Geltungsbereich."@de .
+
+zx:numericValue a owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label  "numeric value"@en , "Zahlenwert"@de ;
+    rdfs:domain zx:QuantityValue ;
+    rdfs:range  xsd:decimal .
+
+zx:hasUnit a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label  "has unit"@en , "hat Einheit"@de ;
+    rdfs:domain zx:QuantityValue ;
+    rdfs:range  zx:Unit .
+
+zx:Unit a owl:Class ;
+    rdfs:label   "Unit"@en , "Einheit"@de ;
+    rdfs:comment "Reuse-Kandidat: qudt:Unit."@de .
+
+################################################################
+##  Produkt
+################################################################
+
+zx:Product a owl:Class ;
+    rdfs:label   "Product"@en , "Produkt"@de ;
+    rdfs:comment "OFFEN: Trennung Produkttyp und Produktexemplar noch nicht entschieden."@de .
+
+##  flache Angaben (CQ-1.2, 1.3, 1.4, 1.14, 6.1, 7.2)
+##  Iteration 1: Literale. Bei Bedarf spaeter gegen SKOS-Konzepte tauschen.
+
+zx:productName a owl:DatatypeProperty ;
+    rdfs:label "product name"@en , "Produktname"@de ;
+    rdfs:domain zx:Product ; rdfs:range xsd:string .
+
+zx:costGroup a owl:DatatypeProperty ;
+    rdfs:label "cost group"@en , "Kostengruppe DIN 276"@de ;
+    rdfs:domain zx:Product ; rdfs:range xsd:string ;
+    rdfs:comment "Hierarchie nicht abgedeckt. Siehe CQ-1.4."@de .
+
+zx:cprCode a owl:DatatypeProperty ;
+    rdfs:label "CPR code"@en , "BauPVO-Code"@de ;
+    rdfs:domain zx:Product ; rdfs:range xsd:string .
+
+zx:productCategory a owl:DatatypeProperty ;
+    rdfs:label "product category"@en , "Produktkategorie"@de ;
+    rdfs:domain zx:Product ; rdfs:range xsd:string .
+
+zx:energyEfficiencyClass a owl:DatatypeProperty ;
+    rdfs:label "energy efficiency class"@en , "Energieeffizienzklasse"@de ;
+    rdfs:domain zx:Product ; rdfs:range xsd:string .
+
+################################################################
+##  P1  typisierter Wert
+################################################################
+
+zx:IndicatorValue a owl:Class ;
+    rdfs:subClassOf zx:QuantityValue ;
+    rdfs:label      "Indicator value"@en , "Indikatorwert"@de .
+
+zx:Indicator a owl:Class ;
+    rdfs:label   "Indicator"@en , "Indikator"@de ;
+    rdfs:comment "Messbare Groesse. Instanzen: GWP total, Nennleistung. Reuse-Kandidat: bSDD, ISOProps."@de .
+
+zx:EnvironmentalIndicator a owl:Class ; rdfs:subClassOf zx:Indicator ;
+    rdfs:label "Environmental indicator"@en , "Umweltindikator"@de .
+zx:TechnicalIndicator a owl:Class ; rdfs:subClassOf zx:Indicator ;
+    rdfs:label "Technical indicator"@en , "Technischer Indikator"@de .
+zx:PhysicalIndicator a owl:Class ; rdfs:subClassOf zx:Indicator ;
+    rdfs:label "Physical indicator"@en , "Physikalischer Indikator"@de .
+
+zx:LifeCycleModule a owl:Class ;
+    rdfs:label   "Life cycle module"@en , "Lebenszyklusmodul"@de ;
+    rdfs:comment "Nach EN 15804, z. B. A1-A3, C3, D."@de .
+
+zx:DeclaredUnit a owl:Class ;
+    rdfs:label "Declared unit"@en , "Bezugseinheit"@de .
+
+zx:hasIndicatorValue a owl:ObjectProperty ;
+    rdfs:label "has indicator value"@en , "hat Indikatorwert"@de ;
+    rdfs:domain zx:Product ; rdfs:range zx:IndicatorValue .
+
+zx:forIndicator a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "for indicator"@en , "betrifft Indikator"@de ;
+    rdfs:domain zx:IndicatorValue ; rdfs:range zx:Indicator .
+
+zx:appliesToModule a owl:ObjectProperty ;
+    rdfs:label   "applies to module"@en , "gilt fuer Modul"@de ;
+    rdfs:domain  zx:IndicatorValue ; rdfs:range zx:LifeCycleModule ;
+    rdfs:comment "Nicht funktional: A1-A3 kann als ein oder als drei Module gefuehrt werden."@de .
+
+zx:hasDeclaredUnit a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "has declared unit"@en , "hat Bezugseinheit"@de ;
+    rdfs:domain zx:IndicatorValue ; rdfs:range zx:DeclaredUnit .
+
+################################################################
+##  P2  Anteil an Zusammensetzung
+################################################################
+
+zx:MaterialShare a owl:Class ;
+    rdfs:subClassOf zx:QuantityValue ;
+    rdfs:label      "Material share"@en , "Materialanteil"@de ;
+    rdfs:comment    "Ein Eintrag der Zusammensetzung: verbindet Produkt, Material und Mengenangabe."@de .
+
+zx:Material a owl:Class ;
+    rdfs:label   "Material"@en , "Material"@de ;
+    rdfs:comment "Instanzen: Stahl, Kupfer, R290. Reuse-Kandidat: eClass, bSDD."@de .
+
+zx:HazardousSubstance a owl:Class ; rdfs:subClassOf zx:Material ;
+    rdfs:label   "Hazardous substance"@en , "Gefahrstoff"@de ;
+    rdfs:comment "Art. 3 CLP-VO (EG) 1272/2008. Traegt CQ-2.2 ohne eigene Property."@de .
+
+zx:CriticalRawMaterial a owl:Class ; rdfs:subClassOf zx:Material ;
+    rdfs:label   "Critical raw material"@en , "Kritischer Rohstoff"@de ;
+    rdfs:comment "Anh. II (EU) 2024/1252. Traegt CQ-2.3 ohne eigene Property."@de .
+
+zx:ShareType a owl:Class ;
+    rdfs:label "Share type"@en , "Anteilsart"@de .
+
+zx:OriginType a owl:Class ; rdfs:subClassOf zx:ShareType ;
+    rdfs:label   "Origin type"@en , "Herkunftsart"@de ;
+    rdfs:comment "CQ-2.4 bis 2.6: Rezyklat, erneuerbar, wiederverwendet."@de .
+
+zx:PropertyType a owl:Class ; rdfs:subClassOf zx:ShareType ;
+    rdfs:label   "Property type"@en , "Eigenschaftsart"@de ;
+    rdfs:comment "CQ-2.7 und 2.8: sortenrein trennbar, biologisch abbaubar. Orthogonal zur Herkunft."@de .
+
+zx:hasMaterialShare a owl:ObjectProperty ;
+    rdfs:label "has material share"@en , "hat Materialanteil"@de ;
+    rdfs:domain zx:Product ; rdfs:range zx:MaterialShare .
+
+zx:ofMaterial a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "of material"@en , "betrifft Material"@de ;
+    rdfs:domain zx:MaterialShare ; rdfs:range zx:Material .
+
+zx:hasShareType a owl:ObjectProperty ;
+    rdfs:label   "has share type"@en , "hat Anteilsart"@de ;
+    rdfs:domain  zx:MaterialShare ; rdfs:range zx:ShareType ;
+    rdfs:comment "Nicht funktional: ein Anteil kann Herkunfts- und Eigenschaftsqualifier zugleich tragen."@de .

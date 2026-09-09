@@ -1,0 +1,75 @@
+@prefix zx:      <https://zirkular-x.tech/ontology/p1#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://zirkular-x.tech/ontology/p2> a owl:Ontology ;
+    owl:imports <https://zirkular-x.tech/ontology/p1> ;
+    dcterms:title "P2 material share pattern"@en ;
+    rdfs:comment "Entwurfsmodul zum Muster 'Anteil an Zusammensetzung'. Deckt CQ-2.1 bis 2.8 ab."@de ;
+    owl:versionInfo "0.1.0-draft" .
+
+##  Klassen  ############################################################
+
+zx:Material a owl:Class ;
+    rdfs:label "Material"@en , "Material"@de ;
+    rdfs:comment "Werkstoff oder Stoff. Instanzen: Stahl, Kupfer, R290. Reuse-Kandidat pruefen: eClass, bSDD."@de .
+
+zx:HazardousSubstance a owl:Class ;
+    rdfs:subClassOf zx:Material ;
+    rdfs:label "Hazardous substance"@en , "Gefahrstoff"@de ;
+    rdfs:comment "Stoff gemaess Art. 3 CLP-Verordnung (EG) Nr. 1272/2008. Traegt CQ-2.2."@de .
+
+zx:CriticalRawMaterial a owl:Class ;
+    rdfs:subClassOf zx:Material ;
+    rdfs:label "Critical raw material"@en , "Kritischer Rohstoff"@de ;
+    rdfs:comment "Rohstoff gemaess Anh. II (EU) 2024/1252. Traegt CQ-2.3."@de .
+
+zx:MaterialShare a owl:Class ;
+    rdfs:label "Material share"@en , "Materialanteil"@de ;
+    rdfs:comment "Ein Eintrag der Zusammensetzung: verbindet Produkt, Material und Mengenangabe."@de .
+
+zx:ShareType a owl:Class ;
+    rdfs:label "Share type"@en , "Anteilsart"@de ;
+    rdfs:comment "Qualifier eines Anteils. Zwei Achsen, siehe Unterklassen."@de .
+
+zx:OriginType a owl:Class ;
+    rdfs:subClassOf zx:ShareType ;
+    rdfs:label "Origin type"@en , "Herkunftsart"@de ;
+    rdfs:comment "Woher das Material stammt. Traegt CQ-2.4 bis 2.6."@de .
+
+zx:PropertyType a owl:Class ;
+    rdfs:subClassOf zx:ShareType ;
+    rdfs:label "Property type"@en , "Eigenschaftsart"@de ;
+    rdfs:comment "Eigenschaft des Materials im Produkt. Traegt CQ-2.7 und 2.8. Orthogonal zur Herkunft."@de .
+
+##  Object properties  ##################################################
+
+zx:hasMaterialShare a owl:ObjectProperty ;
+    rdfs:label "has material share"@en , "hat Materialanteil"@de ;
+    rdfs:domain zx:Product ;
+    rdfs:range  zx:MaterialShare .
+
+zx:ofMaterial a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "of material"@en , "betrifft Material"@de ;
+    rdfs:domain zx:MaterialShare ;
+    rdfs:range  zx:Material .
+
+zx:hasShareType a owl:ObjectProperty ;
+    rdfs:label "has share type"@en , "hat Anteilsart"@de ;
+    rdfs:domain zx:MaterialShare ;
+    rdfs:range  zx:ShareType ;
+    rdfs:comment "Nicht funktional: ein Anteil kann Herkunfts- und Eigenschaftsqualifier zugleich tragen."@de .
+
+##  Domain-Korrektur an den aus P1 uebernommenen Properties  ############
+#  numericValue und hasUnit hatten in P1 die Domain IndicatorValue.
+#  Ohne Korrektur wuerde ein Reasoner jeden MaterialShare als
+#  IndicatorValue klassifizieren. Domain daher auf die Vereinigung
+#  erweitern.
+
+zx:numericValue rdfs:domain [ a owl:Class ;
+    owl:unionOf ( zx:IndicatorValue zx:MaterialShare ) ] .
+
+zx:hasUnit rdfs:domain [ a owl:Class ;
+    owl:unionOf ( zx:IndicatorValue zx:MaterialShare ) ] .

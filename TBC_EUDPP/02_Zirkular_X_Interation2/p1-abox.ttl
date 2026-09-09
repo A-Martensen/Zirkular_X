@@ -1,0 +1,79 @@
+@prefix zx:   <https://zirkular-x.tech/ontology/p1#> .
+@prefix ex:   <https://example.org/zx/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/zx/abox> a owl:Ontology ;
+    owl:imports <https://zirkular-x.tech/ontology/p1> .
+
+##  Vokabular: Indikatoren  #############################################
+
+ex:GWPtotal   a zx:EnvironmentalIndicator ; rdfs:label "GWP total"@en , "GWP total"@de .
+ex:GWPfossil  a zx:EnvironmentalIndicator ; rdfs:label "GWP fossil"@en .
+ex:ODP        a zx:EnvironmentalIndicator ; rdfs:label "Ozone depletion potential"@en , "Ozonabbaupotenzial"@de .
+ex:RatedPower a zx:TechnicalIndicator     ; rdfs:label "Rated power"@en , "Nennleistung"@de .
+ex:AirFlow    a zx:TechnicalIndicator     ; rdfs:label "Volume flow"@en , "Volumenstrom"@de .
+ex:NetWeight  a zx:PhysicalIndicator      ; rdfs:label "Net weight"@en , "Nettogewicht"@de .
+
+##  Vokabular: Einheiten  ###############################################
+
+ex:kgCO2eq  a zx:Unit ; rdfs:label "kg CO2-eq"@en .
+ex:kgCFC11eq a zx:Unit ; rdfs:label "kg CFC-11-eq"@en .
+ex:kW       a zx:Unit ; rdfs:label "kW"@en .
+ex:m3PerH   a zx:Unit ; rdfs:label "m3/h"@en .
+ex:kg       a zx:Unit ; rdfs:label "kg"@en .
+
+##  Vokabular: Module und Bezugseinheiten  ##############################
+
+ex:A1-A3 a zx:LifeCycleModule ; rdfs:label "A1-A3"@en .
+ex:C3    a zx:LifeCycleModule ; rdfs:label "C3"@en .
+ex:D     a zx:LifeCycleModule ; rdfs:label "D"@en .
+
+ex:OnePiece a zx:DeclaredUnit ; rdfs:label "1 piece"@en , "1 Stueck"@de .
+
+##  Produkt  ############################################################
+
+ex:HeatPump-VC300 a zx:Product ;
+    rdfs:label "Vitocal 300-A"@en ;
+    zx:hasIndicatorValue ex:v1 , ex:v2 , ex:v3 , ex:v4 , ex:v5 , ex:v6 .
+
+##  Werte  ##############################################################
+
+ex:v1 a zx:IndicatorValue ;
+    zx:forIndicator    ex:GWPtotal ;
+    zx:numericValue    "1842.5"^^xsd:decimal ;
+    zx:hasUnit         ex:kgCO2eq ;
+    zx:appliesToModule ex:A1-A3 ;
+    zx:hasDeclaredUnit ex:OnePiece .
+
+ex:v2 a zx:IndicatorValue ;
+    zx:forIndicator    ex:GWPtotal ;
+    zx:numericValue    "94.1"^^xsd:decimal ;
+    zx:hasUnit         ex:kgCO2eq ;
+    zx:appliesToModule ex:C3 ;
+    zx:hasDeclaredUnit ex:OnePiece .
+
+ex:v3 a zx:IndicatorValue ;
+    zx:forIndicator    ex:GWPtotal ;
+    zx:numericValue    "-312.0"^^xsd:decimal ;
+    zx:hasUnit         ex:kgCO2eq ;
+    zx:appliesToModule ex:D ;
+    zx:hasDeclaredUnit ex:OnePiece .
+
+ex:v4 a zx:IndicatorValue ;
+    zx:forIndicator    ex:ODP ;
+    zx:numericValue    "0.000021"^^xsd:decimal ;
+    zx:hasUnit         ex:kgCFC11eq ;
+    zx:appliesToModule ex:A1-A3 ;
+    zx:hasDeclaredUnit ex:OnePiece .
+
+ex:v5 a zx:IndicatorValue ;
+    zx:forIndicator ex:RatedPower ;
+    zx:numericValue "11.4"^^xsd:decimal ;
+    zx:hasUnit      ex:kW .
+
+ex:v6 a zx:IndicatorValue ;
+    zx:forIndicator ex:NetWeight ;
+    zx:numericValue "182.0"^^xsd:decimal ;
+    zx:hasUnit      ex:kg .
