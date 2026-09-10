@@ -2,6 +2,7 @@
 # prefix: zxo
 
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -11,41 +12,9 @@
   rdf:type owl:Ontology ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-zxo:Address
-  rdf:type owl:Class ;
-  rdfs:label "Address"@en ;
-  rdfs:label "Adresse"@de ;
-.
 zxo:AveTimeInUse
   rdf:type owl:Class ;
-  rdfs:subClassOf zxo:BuildingProductLifeCycleInfo ;
-.
-zxo:BuildingProduct
-  rdf:type owl:Class ;
-.
-zxo:BuildingProductDPP
-  rdf:type owl:Class ;
-.
-zxo:BuildingProductDesc
-  rdf:type owl:Class ;
-  rdfs:subClassOf owl:Thing ;
-.
-zxo:BuildingProductIdentificator
-  rdf:type owl:Class ;
-  rdfs:subClassOf owl:Thing ;
-.
-zxo:BuildingProductLifeCycleInfo
-  rdf:type owl:Class ;
-  rdfs:subClassOf owl:Thing ;
-.
-zxo:BuildingProductMaterialComposition
-  rdf:type owl:Class ;
-  rdfs:subClassOf owl:Thing ;
-.
-zxo:BuildingProductMaterialShare
-  rdf:type owl:Class ;
-  rdfs:label "Material share"@en ;
-  rdfs:label "Materialanteil"@de ;
+  rdfs:subClassOf zxo:P_LCInfo ;
 .
 zxo:BuildingType
   rdf:type owl:Class ;
@@ -67,12 +36,7 @@ zxo:BuildingType
 .
 zxo:Classification
   rdf:type owl:Class ;
-  rdfs:subClassOf zxo:BuildingProductDesc ;
-.
-zxo:ContactData
-  rdf:type owl:Class ;
-  rdfs:label "Contact data"@en ;
-  rdfs:label "Kontaktdaten"@de ;
+  rdfs:subClassOf zxo:P_Desciption ;
 .
 zxo:CulturalBuilding
   rdf:type owl:NamedIndividual ;
@@ -99,7 +63,7 @@ zxo:InstructedPerson
 .
 zxo:LCKeyEvents
   rdf:type owl:Class ;
-  rdfs:subClassOf zxo:BuildingProductLifeCycleInfo ;
+  rdfs:subClassOf zxo:P_LCInfo ;
 .
 zxo:LastDisassembly
   rdf:type owl:Class ;
@@ -113,18 +77,9 @@ zxo:Maintenance
   rdf:type owl:Class ;
   rdfs:subClassOf zxo:LCKeyEvents ;
 .
-zxo:MaintenanceAction
-  rdf:type rdf:Property ;
-  rdfs:domain zxo:Maintenance ;
-  rdfs:range xsd:string ;
-.
 zxo:MinTimeInUse
   rdf:type owl:Class ;
-  rdfs:subClassOf zxo:BuildingProductLifeCycleInfo ;
-.
-zxo:ObjectProperty_1
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain zxo:BuildingProductMaterialComposition ;
+  rdfs:subClassOf zxo:P_LCInfo ;
 .
 zxo:OfficeAndAdministrationBuilding
   rdf:type owl:NamedIndividual ;
@@ -134,7 +89,7 @@ zxo:OfficeAndAdministrationBuilding
 .
 zxo:OperatingContitions
   rdf:type owl:Class ;
-  rdfs:subClassOf zxo:BuildingProductDesc ;
+  rdfs:subClassOf zxo:OperationalDesc ;
 .
 zxo:OperatingPersonnel
   rdf:type owl:NamedIndividual ;
@@ -142,6 +97,30 @@ zxo:OperatingPersonnel
   rdfs:comment "Layperson or user."@en ;
   rdfs:label "Bedienpersonal"@de ;
   rdfs:label "Operating personnel"@en ;
+.
+zxo:OperationalDesc
+  rdf:type owl:Class ;
+  rdfs:subClassOf zxo:P_Desciption ;
+.
+zxo:P_DPP
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+zxo:P_Desciption
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+zxo:P_Identificator
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+zxo:P_LCInfo
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+zxo:P_MEP
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
 .
 zxo:Production
   rdf:type owl:Class ;
@@ -162,7 +141,7 @@ zxo:QualifiedSpecialist
 .
 zxo:QuantitativeDesc
   rdf:type owl:Class ;
-  rdfs:subClassOf zxo:BuildingProductDesc ;
+  rdfs:subClassOf zxo:P_Desciption ;
 .
 zxo:ResearchAndEducationBuilding
   rdf:type owl:NamedIndividual ;
@@ -184,7 +163,7 @@ zxo:SportsAndRecreationBuilding
 .
 zxo:TechnicalDesc
   rdf:type owl:Class ;
-  rdfs:subClassOf zxo:BuildingProductDesc ;
+  rdfs:subClassOf zxo:P_Desciption ;
 .
 zxo:TradeAndCommerceBuilding
   rdf:type owl:NamedIndividual ;
@@ -217,20 +196,9 @@ zxo:Width
   rdf:type owl:Class ;
   rdfs:subClassOf zxo:QuantitativeDesc ;
 .
-zxo:dppDescibesProduct
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain zxo:BuildingProductDPP ;
-.
-zxo:hasAddress
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain zxo:ContactData ;
-  rdfs:label "has address"@en ;
-  rdfs:label "hat Adresse"@de ;
-  rdfs:range zxo:Address ;
-.
 zxo:hasBauPVOCode
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:BuildingProductIdentificator ;
+  rdfs:domain zxo:P_Identificator ;
   rdfs:range xsd:string ;
 .
 zxo:hasBeenInstalledInBuildingOfType
@@ -244,59 +212,9 @@ zxo:hasClassificationName
   rdfs:domain zxo:Classification ;
   rdfs:range xsd:string ;
 .
-zxo:hasContactData
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "has contact data"@en ;
-  rdfs:label "hat Kontaktdaten"@de ;
-  rdfs:range zxo:ContactData ;
-.
-zxo:hasContitionDescription
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:OperatingContitions ;
-  rdfs:range xsd:string ;
-.
-zxo:hasCountry
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:Address ;
-  rdfs:label "has country"@en ;
-  rdfs:label "hat Land"@de ;
-  rdfs:range xsd:string ;
-.
 zxo:hasDIN276CostGroup
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:BuildingProductIdentificator ;
-  rdfs:range xsd:string ;
-.
-zxo:hasDPP
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain zxo:BuildingProduct ;
-.
-zxo:hasDisassemblyLocation
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain zxo:LastDisassembly ;
-  rdfs:label "has disassembly location"@en ;
-  rdfs:label "hat Demontageort"@de ;
-  rdfs:range zxo:Address ;
-.
-zxo:hasEmail
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:ContactData ;
-  rdfs:label "has email"@en ;
-  rdfs:label "hat E-Mail"@de ;
-  rdfs:range xsd:string ;
-.
-zxo:hasFunction
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:BuildingProductMaterialShare ;
-  rdfs:label "has function"@en ;
-  rdfs:label "hat Funktion"@de ;
-  rdfs:range xsd:string ;
-.
-zxo:hasHouseNumber
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:Address ;
-  rdfs:label "has house number"@en ;
-  rdfs:label "hat Hausnummer"@de ;
+  rdfs:domain zxo:P_Identificator ;
   rdfs:range xsd:string ;
 .
 zxo:hasKeyDate
@@ -304,108 +222,21 @@ zxo:hasKeyDate
   rdfs:domain zxo:LCKeyEvents ;
   rdfs:range xsd:date ;
 .
-zxo:hasMainUserGroup
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain zxo:BuildingProduct ;
-  rdfs:range zxo:UserGroup ;
-.
-zxo:hasManufacturerContact
-  rdf:type rdf:Property ;
-  rdfs:domain zxo:BuildingProductIdentificator ;
-  rdfs:range zxo:ContactData ;
-.
-zxo:hasMaterialName
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:BuildingProductMaterialShare ;
-  rdfs:label "has material name"@en ;
-  rdfs:label "hat Materialname"@de ;
-  rdfs:range xsd:string ;
-.
-zxo:hasMaterialShare
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain zxo:BuildingProductMaterialComposition ;
-  rdfs:range zxo:BuildingProductMaterialShare ;
-.
-zxo:hasMatrialComposition
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain zxo:BuildingProduct ;
-.
-zxo:hasNumercalValue
-  rdf:type rdf:Property ;
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:AveTimeInUse ;
-  rdfs:domain zxo:MinTimeInUse ;
-  rdfs:domain zxo:QuantitativeDesc ;
-  rdfs:range xsd:decimal ;
-.
-zxo:hasNumericValue
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:BuildingProductMaterialShare ;
-  rdfs:label "has numeric value"@en ;
-  rdfs:label "hat Zahlenwert"@de ;
-  rdfs:range xsd:decimal ;
-.
-zxo:hasPhoneNumber
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:ContactData ;
-  rdfs:label "has phone number"@en ;
-  rdfs:label "hat Telefonnummer"@de ;
-  rdfs:range xsd:string ;
-.
-zxo:hasPostCode
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:Address ;
-  rdfs:label "has post code"@en ;
-  rdfs:label "hat Postleitzahl"@de ;
-  rdfs:range xsd:string ;
-.
 zxo:hasProductName
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:BuildingProductIdentificator ;
-  rdfs:range xsd:string ;
-.
-zxo:hasProductionLocation
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain zxo:Production ;
-  rdfs:label "has production location"@en ;
-  rdfs:label "hat Produktionsort"@de ;
-  rdfs:range zxo:Address ;
-.
-zxo:hasRegion
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:Address ;
-  rdfs:label "has region"@en ;
-  rdfs:label "hat Region"@de ;
-  rdfs:range xsd:string ;
-.
-zxo:hasStreet
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:Address ;
-  rdfs:label "has street"@en ;
-  rdfs:label "hat Strasse"@de ;
+  rdfs:domain zxo:P_Identificator ;
   rdfs:range xsd:string ;
 .
 zxo:hasUniqueID
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:BuildingProductIdentificator ;
+  rdfs:domain zxo:P_Identificator ;
+  rdfs:range xsd:integer ;
 .
 zxo:hasUnit
   rdf:type rdf:Property ;
-  rdf:type owl:ObjectProperty ;
   rdfs:domain zxo:AveTimeInUse ;
-  rdfs:domain zxo:BuildingProductMaterialShare ;
   rdfs:domain zxo:MinTimeInUse ;
   rdfs:domain zxo:QuantitativeDesc ;
-  rdfs:label "has unit"@en ;
-  rdfs:label "hat Einheit"@de ;
-  rdfs:range zxo:Unit ;
-.
-zxo:hasWebsite
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:ContactData ;
-  rdfs:label "has website"@en ;
-  rdfs:label "hat Webseite"@de ;
-  rdfs:range xsd:string ;
 .
 zxo:isUsedByUsergroup
   rdf:type owl:FunctionalProperty ;

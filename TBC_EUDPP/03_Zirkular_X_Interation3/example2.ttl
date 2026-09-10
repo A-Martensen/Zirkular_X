@@ -1,0 +1,217 @@
+# baseURI: https://zirkular-x/example2
+# imports: https://zirkular-x/zxo
+# imports: https://zirkular-x/zxo_con
+# prefix: example2
+
+@prefix eudpp: <https://w3id.org/eudpp#> .
+@prefix example2: <https://zirkular-x/example2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zxo: <https://zirkular-x/zxo#> .
+@prefix zxo_con: <https://zirkular-x/zxo_con#> .
+
+<https://zirkular-x/example2>
+  rdf:type owl:Ontology ;
+  owl:imports <https://zirkular-x/zxo> ;
+  owl:imports <https://zirkular-x/zxo_con> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+example2:Bsp2_BauteilKlassifikation
+  rdf:type zxo:Classification ;
+  zxo:hasClassificationName "Zentrale RLT-Anlage " ;
+.
+example2:Bsp2_Bedingung
+  rdf:type zxo:OperatingContitions ;
+  zxo:hasContitionDescription "Betriebstemperatur: -30°C bis +50°C, DIN EN 13053" ;
+.
+example2:Bsp2_DPP_ProduktBsp2
+  rdf:type zxo:BuildingProductDPP ;
+  zxo:dppDescibesProduct example2:Bsp2_DPP_ProduktBsp2 ;
+.
+example2:Bsp2_DurchschnittsNutzungsZeit
+  rdf:type zxo:AveTimeInUse ;
+  zxo:hasNumercalValue "40"^^xsd:decimal ;
+  zxo:hasUnit example2:Bsp2_jahr ;
+.
+example2:Bsp2_Hersteller
+  rdf:type zxo:ContactData ;
+  zxo:hasAddress example2:Bsp_2_HerstellerAdresse ;
+  zxo:hasEmail "documentation@geberit.com" ;
+  zxo:hasPhoneNumber "+49 (0)12345677" ;
+  zxo:hasWebsite "documentation@geberit.com" ;
+.
+example2:Bsp2_LetzteDemontage
+  rdf:type zxo:LastDisassembly ;
+  zxo:hasDisassemblyLocation example2:Bsp2_MusterAdresse ;
+  zxo:hasKeyDate "2014-12-05"^^xsd:date ;
+.
+example2:Bsp2_Lueftung
+  rdf:type zxo:BuildingProductIdentificator ;
+  zxo:hasBauPVOCode "keine Angabe" ;
+  zxo:hasDIN276CostGroup "431" ;
+  zxo:hasManufacturerContact example2:Bsp2_Hersteller ;
+  zxo:hasProductName "X-CUBE" ;
+  zxo:hasUniqueID "X-AIR-12.5-A-08-11942" ;
+.
+example2:Bsp2_Material1
+  rdf:type zxo:BuildingProductMaterialShare ;
+  zxo:hasFunction "Pulverbeschichtet, Gehaeusewaende" ;
+  zxo:hasMaterialName "Verzinktes Stahlblech" ;
+  zxo:hasNumericValue "68"^^xsd:decimal ;
+  zxo:hasUnit example2:Bsp2_Precentage ;
+.
+example2:Bsp2_Material2
+  rdf:type zxo:BuildingProductMaterialShare ;
+  zxo:hasFunction "Rahmenprofile, Rotorstruktur" ;
+  zxo:hasMaterialName "Aluminium" ;
+  zxo:hasNumericValue "14"^^xsd:decimal ;
+  zxo:hasUnit example2:Bsp2_Precentage ;
+.
+example2:Bsp2_Material3
+  rdf:type zxo:BuildingProductMaterialShare ;
+  zxo:hasFunction "Registerrohre" ;
+  zxo:hasMaterialName "Kupfer" ;
+  zxo:hasNumericValue "3"^^xsd:decimal ;
+  zxo:hasUnit example2:Bsp2_Precentage ;
+.
+example2:Bsp2_Material4
+  rdf:type zxo:BuildingProductMaterialShare ;
+  zxo:hasFunction "Gehaeusedaemmung, nicht brennbar, 50 mm Wandstaerke" ;
+  zxo:hasMaterialName "Mineralwolle" ;
+  zxo:hasNumericValue "9"^^xsd:decimal ;
+  zxo:hasUnit example2:Bsp2_Precentage ;
+.
+example2:Bsp2_Material5
+  rdf:type zxo:BuildingProductMaterialShare ;
+  zxo:hasFunction "Dichtungen, Filterrahmen, Griffe" ;
+  zxo:hasMaterialName "Kunststoffe/Elastomere" ;
+  zxo:hasNumericValue "4"^^xsd:decimal ;
+  zxo:hasUnit example2:Bsp2_Precentage ;
+.
+example2:Bsp2_Material6
+  rdf:type zxo:BuildingProductMaterialShare ;
+  zxo:hasFunction "Motoren, Umrichter" ;
+  zxo:hasMaterialName "Elektronik / Leistungshalbleiter" ;
+  zxo:hasNumericValue "2"^^xsd:decimal ;
+  zxo:hasUnit example2:Bsp2_Precentage ;
+.
+example2:Bsp2_MaterialZusammensetzung
+  rdf:type zxo:BuildingProductMaterialComposition ;
+  zxo:hasMaterialShare example2:Bsp2_Material1 ;
+  zxo:hasMaterialShare example2:Bsp2_Material2 ;
+  zxo:hasMaterialShare example2:Bsp2_Material3 ;
+  zxo:hasMaterialShare example2:Bsp2_Material4 ;
+  zxo:hasMaterialShare example2:Bsp2_Material5 ;
+  zxo:hasMaterialShare example2:Bsp2_Material6 ;
+.
+example2:Bsp2_MepProduct
+  rdf:type zxo:BuildingProduct ;
+  example2:hasIdentificationClass example2:Bsp2_Lueftung ;
+  example2:hasProductDescriptoin example2:Bsp2_BauteilKlassifikation ;
+  example2:hasProductDescriptoin example2:Bsp2_Bedingung ;
+  example2:hasProductDescriptoin example2:Bsp2_TechnicalDesc ;
+  example2:hasProductDescriptoin example2:Bsp_Breite ;
+  example2:hasProductDescriptoin example2:Bsp_Gewicht ;
+  example2:hasProductDescriptoin example2:Bsp_Hoehe ;
+  example2:hasProductDescriptoin example2:Bsp_Laenge ;
+  zxo:hasDPP example2:Bsp2_DPP_ProduktBsp2 ;
+  zxo:hasMainUserGroup zxo:QualifiedSpecialist ;
+  zxo:hasMatrialComposition example2:Bsp2_MaterialZusammensetzung ;
+.
+example2:Bsp2_MinNutzungZeit
+  rdf:type zxo:MinTimeInUse ;
+  zxo:hasNumercalValue "20"^^xsd:decimal ;
+  zxo:hasUnit example2:Bsp2_jahr ;
+.
+example2:Bsp2_MusterAdresse
+  rdf:type zxo:Address ;
+.
+example2:Bsp2_Precentage
+  rdf:type zxo:Unit ;
+  example2:hasUnitSign "%" ;
+.
+example2:Bsp2_Produktion
+  rdf:type zxo:Production ;
+  zxo:hasKeyDate "2014-05-12"^^xsd:date ;
+  zxo:hasProductionLocation example2:Bsp2_MusterAdresse ;
+.
+example2:Bsp2_TechnicalDesc
+  rdf:type zxo:TechnicalDesc ;
+.
+example2:Bsp2_jahr
+  rdf:type zxo:Unit ;
+  example2:hasUnitSign "Jahre" ;
+.
+example2:Bsp2_kilogramm
+  rdf:type zxo:Unit ;
+  example2:hasUnitSign "kg" ;
+.
+example2:Bsp2_milimeter
+  rdf:type zxo:Unit ;
+  example2:hasUnitSign "mm" ;
+.
+example2:Bsp_2_HerstellerAdresse
+  rdf:type zxo:Address ;
+  zxo:hasCity "Neukirchen-Vluyn" ;
+  zxo:hasCountry "Deutschland"@de ;
+  zxo:hasPostCode "47504" ;
+  zxo:hasRegion "Nordrhein-Westfalen" ;
+  zxo:hasStreet "Heinrich-Trox-Platz" ;
+.
+example2:Bsp_Breite
+  rdf:type zxo:Width ;
+  zxo:hasNumercalValue 1600 ;
+  zxo:hasUnit example2:Bsp2_milimeter ;
+.
+example2:Bsp_Gewicht
+  rdf:type zxo:Weight ;
+  zxo:hasNumercalValue 2500 ;
+  zxo:hasUnit example2:Bsp2_kilogramm ;
+.
+example2:Bsp_Hoehe
+  rdf:type zxo:Height ;
+  zxo:hasNumercalValue 1800 ;
+  zxo:hasUnit example2:Bsp2_milimeter ;
+.
+example2:Bsp_Laenge
+  rdf:type zxo:Length ;
+  zxo:hasNumercalValue 1600 ;
+  zxo:hasUnit example2:Bsp2_milimeter ;
+.
+example2:Bsp_LetzteWartung
+  rdf:type zxo:Maintenance ;
+  zxo:MaintenanceAction "Verbesserung durchgeführt" ;
+  zxo:hasKeyDate "2014-05-12"^^xsd:date ;
+.
+example2:hasIdentificationClass
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range zxo:BuildingProductIdentificator ;
+.
+example2:hasProductDescriptoin
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range zxo:BuildingProductDesc ;
+.
+example2:hasTecDesc
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain zxo:TechnicalDesc ;
+  rdfs:range xsd:string ;
+.
+example2:hasUnitSign
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain zxo:Unit ;
+  rdfs:range xsd:string ;
+.
+example2:hasUnitString
+  rdfs:domain zxo:Unit ;
+  rdfs:range owl:DatatypeProperty ;
+.
+zxo:hasNumercalValue
+  rdf:type owl:DatatypeProperty ;
+.
+zxo:hasUniqueID
+  rdfs:range xsd:string ;
+.
