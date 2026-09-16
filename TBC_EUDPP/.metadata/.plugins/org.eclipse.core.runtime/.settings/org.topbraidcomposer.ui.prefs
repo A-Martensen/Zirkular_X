@@ -1,6 +1,5 @@
 //D&A&T&P-http\://www.w3.org/2000/01/rdf-schema\#label\ Intended\ user\ group\ of\ product\ {@en}=false
 //D&A&T&P-http\://www.w3.org/2000/01/rdf-schema\#label\ Teil\ der\ Material\ Composition{@de}=false
 //D&A&T&P-http\://www.w3.org/2004/02/skos/core\#prefLabel\ {name}=false
-NamespaceTreeMode-Property=true
-NewFileBaseURI=https\://zirkular-x.tech/ontology/
+NewFileBaseURI=https\://zirkular-x/
 eclipse.preferences.version=1

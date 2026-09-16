@@ -1,0 +1,116 @@
+# baseURI: https://zirkular-x/test_abox
+# imports: https://w3id.org/eudpp/
+# prefix: test_abox
+
+@prefix eudpp: <https://w3id.org/eudpp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix test_abox: <https://zirkular-x/test_abox#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://zirkular-x/test_abox>
+  rdf:type owl:Ontology ;
+  owl:imports <https://w3id.org/eudpp/> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+test_abox:Property_1
+  rdf:type eudpp:Property ;
+.
+test_abox:zx_Adress
+  rdf:type <https://schema.org/PostalAddress> ;
+.
+test_abox:zx_Height_1
+  rdf:type eudpp:Height ;
+  eudpp:numericalValue "420"^^xsd:decimal ;
+.
+test_abox:zx_ID
+  rdf:type eudpp:ProductIdentifier ;
+  eudpp:hasGranularity eudpp:item ;
+  eudpp:identifierValue "TROX-X-CUBE-A-0925 / SN 88213-004" ;
+.
+test_abox:zx_Length_1
+  rdf:type eudpp:Length ;
+  eudpp:numericalValue "340"^^xsd:decimal ;
+.
+test_abox:zx_Manufacturer
+  rdf:type eudpp:Actor ;
+  <https://schema.org/address> test_abox:zx_Adress ;
+  eudpp:actorName "muster GmbH" ;
+  eudpp:registeredTradeName "muster GmbH" ;
+.
+test_abox:zx_Mat_Aluminium
+  rdf:type eudpp:MaterialOfComposition ;
+  rdfs:label "Aluminium"@de ;
+  eudpp:hasMaterialType test_abox:Aluminium ;
+  eudpp:materialComponent "Rahmenprofile" ;
+  eudpp:materialComponent "Rotorstruktur" ;
+  eudpp:materialPercentage "14"^^xsd:decimal ;
+.
+test_abox:zx_Mat_Copper
+  rdf:type eudpp:MaterialOfComposition ;
+  rdfs:label "Kupfer"@de ;
+  eudpp:hasMaterialType test_abox:Copper ;
+  eudpp:materialComponent "Registerrohre" ;
+  eudpp:materialPercentage "3"^^xsd:decimal ;
+.
+test_abox:zx_Mat_Electronics
+  rdf:type eudpp:MaterialOfComposition ;
+  rdfs:label "Elektronik/Leistungshalbleiter"@de ;
+  eudpp:hasMaterialType test_abox:ElectronicsPowerSemiconductors ;
+  eudpp:materialComponent "Motoren" ;
+  eudpp:materialComponent "Umrichter" ;
+  eudpp:materialPercentage "2"^^xsd:decimal ;
+.
+test_abox:zx_Mat_MineralWool
+  rdf:type eudpp:MaterialOfComposition ;
+  rdfs:label "Mineralwolle"@de ;
+  eudpp:hasMaterialType test_abox:MineralWool ;
+  eudpp:materialComponent "Gehaeusedaemmung" ;
+  eudpp:materialPercentage "9"^^xsd:decimal ;
+.
+test_abox:zx_Mat_Polymers
+  rdf:type eudpp:MaterialOfComposition ;
+  rdfs:label "Kunststoffe/Elastomere"@de ;
+  eudpp:hasMaterialType test_abox:PolymersElastomers ;
+  eudpp:materialComponent "Dichtungen" ;
+  eudpp:materialComponent "Filterrahmen" ;
+  eudpp:materialComponent "Griffe" ;
+  eudpp:materialPercentage "4"^^xsd:decimal ;
+.
+test_abox:zx_Mat_Steel
+  rdf:type eudpp:MaterialOfComposition ;
+  rdfs:label "Verzinktes Stahlblech (pulverbeschichtet)"@de ;
+  eudpp:hasMaterialType test_abox:GalvanizedSteelSheet ;
+  eudpp:materialComponent "Gehaeusewaende" ;
+  eudpp:materialPercentage "68"^^xsd:decimal ;
+.
+test_abox:zx_Product
+  rdf:type eudpp:Product ;
+  eudpp:hasManufacturer test_abox:zx_Manufacturer ;
+  eudpp:hasMaterial test_abox:zx_Mat_Aluminium ;
+  eudpp:hasMaterial test_abox:zx_Mat_Copper ;
+  eudpp:hasMaterial test_abox:zx_Mat_Electronics ;
+  eudpp:hasMaterial test_abox:zx_Mat_MineralWool ;
+  eudpp:hasMaterial test_abox:zx_Mat_Polymers ;
+  eudpp:hasMaterial test_abox:zx_Mat_Steel ;
+  eudpp:hasProductGroup test_abox:zx_ProductClassification ;
+  eudpp:hasProperty test_abox:zx_Height_1 ;
+  eudpp:hasProperty test_abox:zx_Length_1 ;
+  eudpp:hasProperty test_abox:zx_Weight_1 ;
+  eudpp:hasProperty test_abox:zx_Width_1 ;
+  eudpp:hasUniqueProductIdentifier test_abox:zx_ID ;
+  eudpp:manufacturingDate "07/09/2019" ;
+  eudpp:productName "X-CUBE compact A 0925" ;
+.
+test_abox:zx_ProductClassification
+  rdf:type eudpp:ClassificationCode ;
+.
+test_abox:zx_Weight_1
+  rdf:type eudpp:Weight ;
+  eudpp:numericalValue 31.4 ;
+.
+test_abox:zx_Width_1
+  rdf:type eudpp:Width ;
+  eudpp:numericalValue "220"^^xsd:decimal ;
+.

@@ -1,0 +1,108 @@
+# baseURI: https://zirkular-x/zxo
+# prefix: zxo
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zxo: <https://zirkular-x/zxo#> .
+
+<https://zirkular-x/zxo>
+  rdf:type owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+zxo:BuildingProduct
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+zxo:Class_1
+  rdf:type rdfs:Class ;
+.
+zxo:hasAverageLifetime
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range xsd:integer ;
+.
+zxo:hasBauPVOCode
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range xsd:string ;
+.
+zxo:hasDIN276CostGroup
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range xsd:string ;
+.
+zxo:hasHeight
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range xsd:decimal ;
+.
+zxo:hasLength
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range xsd:decimal ;
+.
+zxo:hasPrimaryUserGroup
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+.
+zxo:hasProductCategory
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+.
+zxo:hasProductName
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range xsd:string ;
+.
+zxo:hasProductionDate
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range xsd:date ;
+.
+zxo:hasProductionLocation
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range xsd:string ;
+.
+zxo:hasUniqueIdentifier
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range xsd:string ;
+.
+zxo:hasUsageCondition
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+.
+zxo:hasWeight
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range xsd:decimal ;
+.
+zxo:hasWidth
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range xsd:decimal ;
+.
+zxo:hastLastDisassemblyDate
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range xsd:dateTime ;
+.
+zxo:isUsedInBuildingType
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+.
+zxo:locatinOfLastDemolition
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+.
+zxo:maintenanceActions
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+.
+zxo:manufacturerAdress
+  rdf:type rdf:Property ;
+  rdfs:domain zxo:BuildingProduct ;
+.
