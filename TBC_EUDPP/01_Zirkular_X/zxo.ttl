@@ -113,18 +113,9 @@ zxo:Maintenance
   rdf:type owl:Class ;
   rdfs:subClassOf zxo:LCKeyEvents ;
 .
-zxo:MaintenanceAction
-  rdf:type rdf:Property ;
-  rdfs:domain zxo:Maintenance ;
-  rdfs:range xsd:string ;
-.
 zxo:MinTimeInUse
   rdf:type owl:Class ;
   rdfs:subClassOf zxo:BuildingProductLifeCycleInfo ;
-.
-zxo:ObjectProperty_1
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain zxo:BuildingProductMaterialComposition ;
 .
 zxo:OfficeAndAdministrationBuilding
   rdf:type owl:NamedIndividual ;
@@ -217,9 +208,22 @@ zxo:Width
   rdf:type owl:Class ;
   rdfs:subClassOf zxo:QuantitativeDesc ;
 .
+zxo:containsCriticalRawMaterials
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:decimal ;
+.
+zxo:containsSVHC
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain zxo:BuildingProductMaterialComposition ;
+  rdfs:label "contains SVHC"@en ;
+  rdfs:label "enthaelt SVHC"@de ;
+  rdfs:range xsd:boolean ;
+.
 zxo:dppDescribesProduct
   rdf:type owl:ObjectProperty ;
   rdfs:domain zxo:BuildingProductDPP ;
+  rdfs:range zxo:BuildingProduct ;
+  owl:inverseOf zxo:hasDPP ;
 .
 zxo:hasAddress
   rdf:type owl:ObjectProperty ;
@@ -239,14 +243,30 @@ zxo:hasBeenInstalledInBuildingOfType
   rdfs:label "hat Gebaeudetyp"@de ;
   rdfs:range zxo:BuildingType ;
 .
-zxo:hasBuildingProductDesciptions
+zxo:hasBiodegradableContent
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain zxo:BuildingProductMaterialComposition ;
+  rdfs:label "has biodegradable content"@en ;
+  rdfs:label "hat biologisch abbaubaren Anteil"@de ;
+  rdfs:range xsd:decimal ;
+.
+zxo:hasBuildingProductDescription
   rdf:type owl:ObjectProperty ;
   rdfs:domain zxo:BuildingProduct ;
+  rdfs:range zxo:BuildingProductDesc ;
+.
+zxo:hasCertifiedRenewableContent
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:decimal ;
 .
 zxo:hasClassificationName
   rdf:type owl:DatatypeProperty ;
   rdfs:domain zxo:Classification ;
   rdfs:range xsd:string ;
+.
+zxo:hasCompostableContent
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:decimal ;
 .
 zxo:hasConditionDescription
   rdf:type owl:DatatypeProperty ;
@@ -266,6 +286,13 @@ zxo:hasCountry
   rdfs:label "hat Land"@de ;
   rdfs:range xsd:string ;
 .
+zxo:hasCriticalRawMaterialContent
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain zxo:BuildingProductMaterialComposition ;
+  rdfs:label "has critical raw material content"@en ;
+  rdfs:label "hat Anteil kritischer Rohstoffe"@de ;
+  rdfs:range xsd:decimal ;
+.
 zxo:hasDIN276CostGroup
   rdf:type owl:DatatypeProperty ;
   rdfs:domain zxo:BuildingProductIdentifier ;
@@ -274,6 +301,7 @@ zxo:hasDIN276CostGroup
 zxo:hasDPP
   rdf:type owl:ObjectProperty ;
   rdfs:domain zxo:BuildingProduct ;
+  rdfs:range zxo:BuildingProductDPP ;
 .
 zxo:hasDisassemblyLocation
   rdf:type owl:ObjectProperty ;
@@ -303,25 +331,40 @@ zxo:hasHouseNumber
   rdfs:label "hat Hausnummer"@de ;
   rdfs:range xsd:string ;
 .
-zxo:hasIdentificator
+zxo:hasIdentifier
   rdf:type owl:ObjectProperty ;
   rdfs:domain zxo:BuildingProduct ;
   rdfs:range zxo:BuildingProductIdentifier ;
 .
 zxo:hasKeyDate
-  rdf:type rdf:Property ;
+  rdf:type owl:DatatypeProperty ;
   rdfs:domain zxo:LCKeyEvents ;
   rdfs:range xsd:date ;
+.
+zxo:hasLifeCycleInfo
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range zxo:BuildingProductLifeCycleInfo ;
 .
 zxo:hasMainUserGroup
   rdf:type owl:ObjectProperty ;
   rdfs:domain zxo:BuildingProduct ;
   rdfs:range zxo:UserGroup ;
 .
+zxo:hasMaintenanceAction
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain zxo:Maintenance ;
+  rdfs:range xsd:string ;
+.
 zxo:hasManufacturerContact
-  rdf:type rdf:Property ;
+  rdf:type owl:ObjectProperty ;
   rdfs:domain zxo:BuildingProductIdentifier ;
   rdfs:range zxo:ContactData ;
+.
+zxo:hasMaterialComposition
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain zxo:BuildingProduct ;
+  rdfs:range zxo:BuildingProductMaterialComposition ;
 .
 zxo:hasMaterialName
   rdf:type owl:DatatypeProperty ;
@@ -335,18 +378,22 @@ zxo:hasMaterialShare
   rdfs:domain zxo:BuildingProductMaterialComposition ;
   rdfs:range zxo:BuildingProductMaterialShare ;
 .
-zxo:hasMatrialComposition
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain zxo:BuildingProduct ;
-  rdfs:range zxo:BuildingProductDesc ;
-.
-zxo:hasNumercalValue
-  rdf:type rdf:Property ;
+zxo:hasName
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain zxo:AveTimeInUse ;
+  rdfs:domain zxo:ContactData ;
+  rdfs:range xsd:string ;
+.
+zxo:hasNumericValue
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "\"has numeric value\""@en ;
+  rdfs:label "\"hat Zahlenwert\""@de ;
+  rdfs:range xsd:decimal ;
+.
+zxo:hasPercentage
+  rdf:type owl:DatatypeProperty ;
   rdfs:domain zxo:BuildingProductMaterialShare ;
-  rdfs:domain zxo:MinTimeInUse ;
-  rdfs:domain zxo:QuantitativeDesc ;
+  rdfs:label "\"has percentage\""@en ;
+  rdfs:label "\"hat Prozentanteil\""@de ;
   rdfs:range xsd:decimal ;
 .
 zxo:hasPhoneNumber
@@ -363,6 +410,14 @@ zxo:hasPostCode
   rdfs:label "hat Postleitzahl"@de ;
   rdfs:range xsd:string ;
 .
+zxo:hasPostConsumerRecycledContent
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:decimal ;
+.
+zxo:hasPreConsumerRecycledContent
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:decimal ;
+.
 zxo:hasProductName
   rdf:type owl:DatatypeProperty ;
   rdfs:domain zxo:BuildingProductIdentifier ;
@@ -375,12 +430,41 @@ zxo:hasProductionLocation
   rdfs:label "hat Produktionsort"@de ;
   rdfs:range zxo:Address ;
 .
+zxo:hasRecycledContent
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain zxo:BuildingProductMaterialComposition ;
+  rdfs:label "has recycled content"@en ;
+  rdfs:label "hat Rezyklatgehalt"@de ;
+  rdfs:range xsd:decimal ;
+.
 zxo:hasRegion
   rdf:type owl:DatatypeProperty ;
+  rdfs:comment "rdfs:comment \"City or municipality of the address, e.g. Neukirchen-Vluyn.\""@en ;
   rdfs:domain zxo:Address ;
   rdfs:label "has region"@en ;
   rdfs:label "hat Region"@de ;
   rdfs:range xsd:string ;
+.
+zxo:hasRenewableContent
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain zxo:BuildingProductMaterialComposition ;
+  rdfs:label "has renewable content"@en ;
+  rdfs:label "hat Anteil erneuerbarer Quellen"@de ;
+  rdfs:range xsd:decimal ;
+.
+zxo:hasReusedContent
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain zxo:BuildingProductMaterialComposition ;
+  rdfs:label "has reused content"@en ;
+  rdfs:label "hat wiederverwendeten Anteil"@de ;
+  rdfs:range xsd:decimal ;
+.
+zxo:hasSeparableContent
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain zxo:BuildingProductMaterialComposition ;
+  rdfs:label "has separable content"@en ;
+  rdfs:label "hat sortenrein trennbaren Anteil"@de ;
+  rdfs:range xsd:decimal ;
 .
 zxo:hasStreet
   rdf:type owl:DatatypeProperty ;
@@ -392,9 +476,9 @@ zxo:hasStreet
 zxo:hasUniqueID
   rdf:type owl:DatatypeProperty ;
   rdfs:domain zxo:BuildingProductIdentifier ;
+  rdfs:range xsd:string ;
 .
 zxo:hasUnit
-  rdf:type rdf:Property ;
   rdf:type owl:ObjectProperty ;
   rdfs:label "has unit"@en ;
   rdfs:label "hat Einheit"@de ;
@@ -408,7 +492,6 @@ zxo:hasWebsite
   rdfs:range xsd:string ;
 .
 zxo:isUsedByUserGroup
-  rdf:type owl:FunctionalProperty ;
   rdf:type owl:ObjectProperty ;
   rdfs:label "requires user group"@en ;
   rdfs:range zxo:UserGroup ;

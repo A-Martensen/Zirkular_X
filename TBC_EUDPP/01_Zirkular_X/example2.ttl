@@ -32,7 +32,7 @@ example2:Bsp2_DPP_ProduktBsp2
 .
 example2:Bsp2_DurchschnittsNutzungsZeit
   rdf:type zxo:AveTimeInUse ;
-  zxo:hasNumercalValue "40"^^xsd:decimal ;
+  zxo:hasNumericValue "40"^^xsd:decimal ;
   zxo:hasUnit example2:Bsp2_jahr ;
 .
 example2:Bsp2_Hersteller
@@ -118,11 +118,11 @@ example2:Bsp2_MepProduct
   example2:hasProductDescriptoin example2:Bsp_Laenge ;
   zxo:hasDPP example2:Bsp2_DPP_ProduktBsp2 ;
   zxo:hasMainUserGroup zxo:QualifiedSpecialist ;
-  zxo:hasMatrialComposition example2:Bsp2_MaterialZusammensetzung ;
+  zxo:hasMaterialComposition example2:Bsp2_MaterialZusammensetzung ;
 .
 example2:Bsp2_MinNutzungZeit
   rdf:type zxo:MinTimeInUse ;
-  zxo:hasNumercalValue "20"^^xsd:decimal ;
+  zxo:hasNumericValue "20"^^xsd:decimal ;
   zxo:hasUnit example2:Bsp2_jahr ;
 .
 example2:Bsp2_MusterAdresse
@@ -162,28 +162,28 @@ example2:Bsp_2_HerstellerAdresse
 .
 example2:Bsp_Breite
   rdf:type zxo:Width ;
-  zxo:hasNumercalValue 1600 ;
+  zxo:hasNumericValue 1600 ;
   zxo:hasUnit example2:Bsp2_milimeter ;
 .
 example2:Bsp_Gewicht
   rdf:type zxo:Weight ;
-  zxo:hasNumercalValue 2500 ;
+  zxo:hasNumericValue 2500 ;
   zxo:hasUnit example2:Bsp2_kilogramm ;
 .
 example2:Bsp_Hoehe
   rdf:type zxo:Height ;
-  zxo:hasNumercalValue 1800 ;
+  zxo:hasNumericValue 1800 ;
   zxo:hasUnit example2:Bsp2_milimeter ;
 .
 example2:Bsp_Laenge
   rdf:type zxo:Length ;
-  zxo:hasNumercalValue 1600 ;
+  zxo:hasNumericValue 1600 ;
   zxo:hasUnit example2:Bsp2_milimeter ;
 .
 example2:Bsp_LetzteWartung
   rdf:type zxo:Maintenance ;
-  zxo:MaintenanceAction "Verbesserung durchgeführt" ;
   zxo:hasKeyDate "2014-05-12"^^xsd:date ;
+  zxo:hasMaintenanceAction "Verbesserung durchgeführt" ;
 .
 example2:hasIdentificationClass
   rdf:type owl:ObjectProperty ;
@@ -209,7 +209,7 @@ example2:hasUnitString
   rdfs:domain zxo:Unit ;
   rdfs:range owl:DatatypeProperty ;
 .
-zxo:hasNumercalValue
+zxo:hasNumericValue
   rdf:type owl:DatatypeProperty ;
 .
 zxo:hasUniqueID
