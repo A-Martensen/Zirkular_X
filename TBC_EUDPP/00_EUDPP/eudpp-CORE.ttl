@@ -4,6 +4,7 @@
 # imports: https://w3id.org/eudpp/CONNECTOR
 # imports: https://w3id.org/eudpp/EVENT
 # imports: https://w3id.org/eudpp/IDENT
+# imports: https://w3id.org/eudpp/LCA
 # imports: https://w3id.org/eudpp/MAT
 # imports: https://w3id.org/eudpp/P_DPP
 # imports: https://w3id.org/eudpp/SOC
@@ -79,6 +80,7 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
   owl:imports <https://w3id.org/eudpp/CONNECTOR> ;
   owl:imports <https://w3id.org/eudpp/EVENT> ;
   owl:imports <https://w3id.org/eudpp/IDENT> ;
+  owl:imports <https://w3id.org/eudpp/LCA> ;
   owl:imports <https://w3id.org/eudpp/MAT> ;
   owl:imports <https://w3id.org/eudpp/P_DPP> ;
   owl:imports <https://w3id.org/eudpp/SOC> ;

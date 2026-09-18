@@ -1,0 +1,225 @@
+# baseURI: https://zirkular-x/basicEx
+# imports: https://w3id.org/eudpp/
+# prefix: basicEx
+
+@prefix basicEx: <https://zirkular-x/basicEx#> .
+@prefix eudpp: <https://w3id.org/eudpp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+eudpp:hasLCAStudy
+  rdfs:range eudpp:LCAStudy ;
+.
+<https://zirkular-x/basicEx>
+  rdf:type owl:Ontology ;
+  owl:imports <https://w3id.org/eudpp/> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+basicEx:DigitalInstruction_1
+  rdf:type eudpp:DigitalInstruction ;
+  rdfs:comment """Empfehlungen zu
+- Wiederverwendung
+- Wiederaufbereitung
+- Recycling
+- Entsorgung""" ;
+  eudpp:webLink "https://www.Link-Herstellerinformationen.de"^^xsd:anyURI ;
+.
+basicEx:DigitalInstruction_10
+  rdf:type eudpp:DigitalInstruction ;
+  rdfs:comment "Kompatibilitaet: Softwarekompatibilitaet" ;
+  eudpp:webLink "https://www.Link-Herstellerinformationen.de"^^xsd:anyURI ;
+.
+basicEx:DigitalInstruction_11
+  rdf:type eudpp:DigitalInstruction ;
+  rdfs:comment "Kompatibilitaet: Vertraeglichkeit mit anderen Werkstoffen oder Produkten" ;
+  eudpp:webLink "https://www.Link-Herstellerinformationen.de"^^xsd:anyURI ;
+.
+basicEx:DigitalInstruction_12
+  rdf:type eudpp:DigitalInstruction ;
+  rdfs:comment "Kompatibilitaet: elektrische und elektromagnetische Vertraeglichkeit" ;
+  eudpp:webLink "https://www.Link-Herstellerinformationen.de"^^xsd:anyURI ;
+.
+basicEx:DigitalInstruction_2
+  rdf:type eudpp:DigitalInstruction ;
+  rdfs:comment "Gebrauchsanweisung" ;
+  eudpp:webLink "https://www.Link-Herstellerinformationen.de"^^xsd:anyURI ;
+.
+basicEx:DigitalInstruction_3
+  rdf:type eudpp:DigitalInstruction ;
+  rdfs:comment "Montage-/Installationsanweisung" ;
+  eudpp:webLink "https://www.Link-Herstellerinformationen.de"^^xsd:anyURI ;
+.
+basicEx:DigitalInstruction_4
+  rdf:type eudpp:DigitalInstruction ;
+  rdfs:comment "Beschreibung der Wartungsarbeiten" ;
+  eudpp:webLink "https://www.Link-Herstellerinformationen.de"^^xsd:anyURI ;
+.
+basicEx:DigitalInstruction_5
+  rdf:type eudpp:DigitalInstruction ;
+  rdfs:comment "Haeufigkeit der Wartung" ;
+  eudpp:webLink "https://www.Link-Herstellerinformationen.de"^^xsd:anyURI ;
+.
+basicEx:DigitalInstruction_6
+  rdf:type eudpp:DigitalInstruction ;
+  rdfs:comment "Sicherheitshinweise: potenzielle Risiken und missbraeuchliche Verwendungsmoeglichkeiten" ;
+  eudpp:webLink "https://docuportal.troxgroup.com/w/de_DE/show/abb4fb2f2506416f5fca92d962f439f1_6_de_DE?ct=821a43d43a3acff20a020f42246666fe_6_de_DE"^^xsd:anyURI ;
+.
+basicEx:DigitalInstruction_7
+  rdf:type eudpp:DigitalInstruction ;
+  rdfs:comment "Sicherheitshinweise: Vorgehen bei Produktversagen/Unfaellen" ;
+  eudpp:webLink "https://www.Link-Herstellerinformationen.de"^^xsd:anyURI ;
+.
+basicEx:DigitalInstruction_8
+  rdf:type eudpp:DigitalInstruction ;
+  rdfs:comment "Sicherheitshinweise: sichere Verwendung und zu treffende Schutzmassnahmen" ;
+  eudpp:webLink "https://www.Link-Herstellerinformationen.de"^^xsd:anyURI ;
+.
+basicEx:DigitalInstruction_9
+  rdf:type eudpp:DigitalInstruction ;
+  rdfs:comment "Sicherheitshinweise: Brandschutzhinweise" ;
+  eudpp:webLink "https://www.Link-Herstellerinformationen.de"^^xsd:anyURI ;
+.
+basicEx:Height_1
+  rdf:type eudpp:Height ;
+  eudpp:numericalValue "1800"^^xsd:decimal ;
+.
+basicEx:LCAStudy_1
+  rdf:type eudpp:LCAStudy ;
+  eudpp:hasLCIAResult basicEx:LCIAResult_1 ;
+.
+basicEx:LCIAOrInventoryMethod_1
+  rdf:type eudpp:LCIAOrInventoryMethod ;
+  eudpp:impactCategory eudpp:resourceUseFossil ;
+.
+basicEx:LCIAResult_1
+  rdf:type eudpp:LCIAResult ;
+  eudpp:forLCIAOrInventoryMethod basicEx:LCIAOrInventoryMethod_1 ;
+.
+basicEx:Length_1
+  rdf:type eudpp:Length ;
+  eudpp:numericalValue "1600"^^xsd:decimal ;
+.
+basicEx:MaterialType_1
+  rdf:type eudpp:MaterialType ;
+  rdfs:label "Verzinktes Stahlblech"@de ;
+.
+basicEx:MaterialType_2
+  rdfs:label "Aluminium"@de ;
+.
+basicEx:MaterialType_3
+  rdfs:label "Kupfer"@de ;
+.
+basicEx:MaterialType_4
+  rdfs:label "Mineralwolle"@de ;
+.
+basicEx:MaterialType_5
+  rdfs:label "Kunststoffe/Elastomere"@de ;
+.
+basicEx:MaterialType_6
+  rdfs:label "Elektronik/Leistungshalbleiter"@de ;
+.
+basicEx:RecycledMaterialsUse_1
+  rdf:type eudpp:RecycledMaterialsUse ;
+  eudpp:numericalValue "10"^^xsd:decimal ;
+.
+basicEx:SubstanceOfConcern_1
+  rdf:type eudpp:SubstanceOfConcern ;
+.
+basicEx:Weight_1
+  rdf:type eudpp:Weight ;
+  eudpp:numericalValue "2500"^^xsd:decimal ;
+.
+basicEx:Width_1
+  rdf:type eudpp:Width ;
+  eudpp:numericalValue "1600"^^xsd:decimal ;
+.
+basicEx:hersteller_mustGMmbH
+  rdf:type eudpp:LegalPerson ;
+  eudpp:actorName "muster GmbH" ;
+  eudpp:isEstablishedIn basicEx:location_1 ;
+  eudpp:registeredTradeName "muster GmbH"@de ;
+  eudpp:registeredTrademark "muster GmbH" ;
+.
+basicEx:identifier_lueftung
+  rdf:type eudpp:ProductIdentifier ;
+  eudpp:hasGranularity eudpp:item ;
+  eudpp:identifierValue "X-AIR-12.5-A-08-11942" ;
+.
+basicEx:lcaStudy
+  rdf:type owl:Thing ;
+.
+basicEx:location_1
+  rdf:type <http://purl.org/dc/terms#Location> ;
+.
+basicEx:lueftung
+  rdf:type eudpp:Product ;
+  eudpp:hasLCAStudy basicEx:LCAStudy_1 ;
+  eudpp:hasLCAStudy basicEx:lcaStudy ;
+  eudpp:hasManufacturer basicEx:hersteller_mustGMmbH ;
+  eudpp:hasMaterial basicEx:material_1 ;
+  eudpp:hasMaterial basicEx:material_2 ;
+  eudpp:hasMaterial basicEx:material_3 ;
+  eudpp:hasMaterial basicEx:material_4 ;
+  eudpp:hasMaterial basicEx:material_5 ;
+  eudpp:hasMaterial basicEx:material_6 ;
+  eudpp:hasProductGroup basicEx:productGroup_1 ;
+  eudpp:hasProperty basicEx:DigitalInstruction_1 ;
+  eudpp:hasProperty basicEx:DigitalInstruction_10 ;
+  eudpp:hasProperty basicEx:DigitalInstruction_11 ;
+  eudpp:hasProperty basicEx:DigitalInstruction_12 ;
+  eudpp:hasProperty basicEx:DigitalInstruction_2 ;
+  eudpp:hasProperty basicEx:DigitalInstruction_3 ;
+  eudpp:hasProperty basicEx:DigitalInstruction_4 ;
+  eudpp:hasProperty basicEx:DigitalInstruction_5 ;
+  eudpp:hasProperty basicEx:DigitalInstruction_6 ;
+  eudpp:hasProperty basicEx:DigitalInstruction_7 ;
+  eudpp:hasProperty basicEx:DigitalInstruction_8 ;
+  eudpp:hasProperty basicEx:DigitalInstruction_9 ;
+  eudpp:hasProperty basicEx:Height_1 ;
+  eudpp:hasProperty basicEx:Length_1 ;
+  eudpp:hasProperty basicEx:RecycledMaterialsUse_1 ;
+  eudpp:hasProperty basicEx:Weight_1 ;
+  eudpp:hasProperty basicEx:Width_1 ;
+  eudpp:hasUniqueProductIdentifier basicEx:identifier_lueftung ;
+  eudpp:manufacturingDate "12.05.2014" ;
+  eudpp:productName "X-CUBE" ;
+.
+basicEx:material_1
+  rdf:type eudpp:MaterialOfComposition ;
+  rdfs:comment "Pulverbeschichtet, Gehaeusewaende"@de ;
+  eudpp:containsSubstanceOfConcern basicEx:SubstanceOfConcern_1 ;
+  eudpp:hasMaterialType basicEx:MaterialType_1 ;
+  eudpp:materialIsRecyclable "true"^^xsd:boolean ;
+  eudpp:materialIsSustainableRenewable "true"^^xsd:boolean ;
+  eudpp:materialRecycledContent "0"^^xsd:decimal ;
+.
+basicEx:material_2
+  rdf:type eudpp:MaterialOfComposition ;
+  rdfs:comment "Rahmenprofile, Rotorstruktur"@de ;
+  eudpp:hasMaterialType basicEx:MaterialType_2 ;
+.
+basicEx:material_3
+  rdf:type eudpp:MaterialOfComposition ;
+  rdfs:comment "Registerrohre"@de ;
+  eudpp:hasMaterialType basicEx:MaterialType_3 ;
+.
+basicEx:material_4
+  rdf:type eudpp:MaterialOfComposition ;
+  rdfs:comment "Gehaeusedaemmung, nicht brennbar, 50 mm Wandstaerke"@de ;
+  eudpp:hasMaterialType basicEx:MaterialType_4 ;
+.
+basicEx:material_5
+  rdf:type eudpp:MaterialOfComposition ;
+  rdfs:comment "Dichtungen, Filterrahmen, Griffe"@de ;
+  eudpp:hasMaterialType basicEx:MaterialType_5 ;
+.
+basicEx:material_6
+  rdf:type eudpp:MaterialOfComposition ;
+  rdfs:comment "Motoren, Umrichter"@de ;
+  eudpp:hasMaterialType basicEx:MaterialType_6 ;
+.
+basicEx:productGroup_1
+  rdf:type eudpp:ClassificationCode ;
+.
