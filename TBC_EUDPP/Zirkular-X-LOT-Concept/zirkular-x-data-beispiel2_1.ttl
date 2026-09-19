@@ -35,14 +35,6 @@
   zx:din276Code "431" ;
   zx:hasEOLRecs ex:doc-nachnutzung ;
   zx:hasInstallationInst ex:doc-montage ;
-  zx:hasInstructionDoc ex:doc-brandschutz ;
-  zx:hasInstructionDoc ex:doc-emv ;
-  zx:hasInstructionDoc ex:doc-produktversagen ;
-  zx:hasInstructionDoc ex:doc-risiken ;
-  zx:hasInstructionDoc ex:doc-schutzmassnahmen ;
-  zx:hasInstructionDoc ex:doc-software ;
-  zx:hasInstructionDoc ex:doc-vertraeglichkeit ;
-  zx:hasInstructionDoc ex:doc-wartung ;
   zx:hasLifecycleEvent ex:evt-baujahr ;
   zx:hasLifecycleEvent ex:evt-demontage ;
   zx:hasLifecycleEvent ex:evt-erzeugung ;
@@ -96,6 +88,7 @@ ex:GEB-ZENTRALE-01
   rdf:type zx:Building ;
   rdfs:label "GEB-ZENTRALE-01" ;
   zx:constructionDate "1987-05-15"^^xsd:date ;
+  zx:hasBuildingType zx:btOffice ;
 .
 ex:RM-401
   rdf:type zx:Room ;

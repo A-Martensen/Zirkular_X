@@ -1689,6 +1689,7 @@
 ///TopBraid/TBC/xhtml.ttl=true
 ///TopBraid/VERSION=true
 //PREFERRED-https\://zirkular-x/zxo=/03_Zirkular_X_Interation3/zxo.ttl
+//SelectedResourcefile\:///Zirkular-X-LOT-Concept/zirkular-x-data-beispiel2.rdf=https\://w3id.org/zirkular-x/data/doc-brandschutz
 //SelectedResourcehttp\://example.org/Aggregation=http\://example.org/Aggregation
 //SelectedResourcehttp\://example.org/ZXCon=http\://example.org/ZXCon
 //SelectedResourcehttp\://example.org/kennedys2schema=http\://example.org/kennedys2schema
@@ -1711,8 +1712,9 @@
 //SelectedResourcehttps\://w3id.org/eudpp/MAT=https\://w3id.org/eudpp\#MaterialType
 //SelectedResourcehttps\://w3id.org/eudpp/P_DPP=https\://w3id.org/eudpp\#Product
 //SelectedResourcehttps\://w3id.org/eudpp/SOC=https\://w3id.org/eudpp\#Substance
-//SelectedResourcehttps\://w3id.org/zirkular-x\#=https\://w3id.org/zirkular-x\#hasProductionLocation
-//SelectedResourcehttps\://w3id.org/zirkular-x/bridge-eudpp=https\://w3id.org/zirkular-x/bridge-eudpp
+//SelectedResourcehttps\://w3id.org/zirkular-x\#=https\://w3id.org/zirkular-x\#hasProductDocumentation
+//SelectedResourcehttps\://w3id.org/zirkular-x/bridge-eudpp=https\://w3id.org/eudpp\#hasExternalDocumentation
+//SelectedResourcehttps\://w3id.org/zirkular-x/data/beispiel2=https\://w3id.org/zirkular-x\#hasProductDocumentation
 //SelectedResourcehttps\://zirkular-x.tech/ontology/BaseStructure=https\://zirkular-x.tech/ontology/BaseStructure
 //SelectedResourcehttps\://zirkular-x.tech/ontology/EUDPP_EXT=https\://zirkular-x.tech/ontology/ZXO\#BuildingProduct
 //SelectedResourcehttps\://zirkular-x.tech/ontology/Example=https\://zirkular-x.tech/ontology/Example\#Beispiel2_Lueftung
@@ -1723,6 +1725,7 @@
 //SelectedResourcehttps\://zirkular-x.tech/ontology/zxo=https\://zirkular-x.tech/ontology/zxo
 //SelectedResourcehttps\://zirkular-x/basicEx=https\://zirkular-x/basicEx\#location_1
 //SelectedResourcehttps\://zirkular-x/example2=https\://zirkular-x/zxo\#isUsedByUserGroup
+//SelectedResourcehttps\://zirkular-x/example2_lueftung=https\://zirkular-x/example2_lueftung
 //SelectedResourcehttps\://zirkular-x/test_abox=https\://w3id.org/eudpp\#EndUserRole
 //SelectedResourcehttps\://zirkular-x/zx_example=https\://zirkular-x/zx_example\#BuildingProduct_1
 //SelectedResourcehttps\://zirkular-x/zxc=https\://zirkular-x/zxc

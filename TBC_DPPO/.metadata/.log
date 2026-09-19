@@ -429,3 +429,18 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.topbraid.core 1 0 2026-09-09 14:36:09.197
 !MESSAGE TopBraid Free Edition v6.0.1.v20180831-1223R: started (org.topbraidcomposer.editors.utils.TBCFEPersonality)
+!SESSION 2026-09-19 12:57:47.974 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-09-19 12:57:53.057
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.topbraid.core 2 0 2026-09-19 12:57:55.386
+!MESSAGE Your license does not cover graphStore: org.topbraid.shacltb.graphql.graphstore.GraphQLGraphStore. Please contact TopQuadrant for upgrade information.
+
+!ENTRY org.topbraid.core 1 0 2026-09-19 12:57:56.660
+!MESSAGE TopBraid Free Edition v6.0.1.v20180831-1223R: started (org.topbraidcomposer.editors.utils.TBCFEPersonality)

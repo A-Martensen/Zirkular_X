@@ -112,7 +112,7 @@ zx:BuildingProduct
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom zx:ProductDoc ;
-      owl:onProperty zx:hasInstructionDoc ;
+      owl:onProperty zx:hasProductDocumentation ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -304,7 +304,7 @@ zx:baupvoCode
 zx:biodegradableContent
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "Parameterliste, Kategorie: Materialinformationen. mass fraction 0-1"@en ;
-  rdfs:domain zx:MaterialComposition ;
+  rdfs:domain zx:BuildingProduct ;
   rdfs:label "Biologische Abbaubarkeit"@de ;
   rdfs:range xsd:decimal ;
 .
@@ -372,7 +372,7 @@ zx:classificationValue
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "Parameterliste, Kategorie: Technische Daten. EN 1886 class code"@en ;
   rdfs:domain zx:ProductProperty ;
-  rdfs:label "Mechanische Stabilitaet"@de ;
+  rdfs:label "Klassifizierungswert"@de ;
   rdfs:range xsd:string ;
 .
 zx:consistsOf
@@ -518,12 +518,6 @@ zx:hasInstallationInst
   rdfs:label "Montage- und Installationsanweisungen"@de ;
   rdfs:range zx:InstallationInst ;
 .
-zx:hasInstructionDoc
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain zx:BuildingProduct ;
-  rdfs:label "has instruction doc" ;
-  rdfs:range zx:ProductDoc ;
-.
 zx:hasLifecycleEvent
   rdf:type owl:ObjectProperty ;
   rdfs:domain zx:BuildingProduct ;
@@ -545,6 +539,7 @@ zx:hasMaterialComposition
 zx:hasProductDocumentation
   rdf:type owl:ObjectProperty ;
   rdfs:domain zx:BuildingProduct ;
+  rdfs:label "has instruction doc" ;
   rdfs:range zx:ProductDoc ;
 .
 zx:hasProductProperty
@@ -558,7 +553,7 @@ zx:hasProductionLocation
   rdfs:comment "Parameterliste, Kategorie: Produktinformationen. REVIEW: Geo/Location in the legend"@en ;
   rdfs:domain zx:StartOfLife ;
   rdfs:label "Ort der Erzeugung"@de ;
-  rdfs:label "has production location" ;
+  rdfs:label "has production location"@en ;
   rdfs:range xsd:string ;
 .
 zx:hasRelatedDPP
@@ -776,14 +771,14 @@ zx:protectiveMeasures
 zx:recycledContent
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "Parameterliste, Kategorie: Materialinformationen. mass fraction 0-1"@en ;
-  rdfs:domain zx:MaterialComposition ;
+  rdfs:domain zx:BuildingProduct ;
   rdfs:label "Rezyklatgehalt"@de ;
   rdfs:range xsd:decimal ;
 .
 zx:renewableContent
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "Parameterliste, Kategorie: Materialinformationen. mass fraction 0-1"@en ;
-  rdfs:domain zx:MaterialComposition ;
+  rdfs:domain zx:BuildingProduct ;
   rdfs:label "Anteil aus erneuerbaren Quellen"@de ;
   rdfs:range xsd:decimal ;
 .
@@ -811,7 +806,7 @@ zx:reusedContent
 zx:separableContent
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "Parameterliste, Kategorie: Materialinformationen. mass fraction 0-1"@en ;
-  rdfs:domain zx:MaterialComposition ;
+  rdfs:domain zx:BuildingProduct ;
   rdfs:label "sortenrein trennbarer Anteil"@de ;
   rdfs:range xsd:decimal ;
 .
