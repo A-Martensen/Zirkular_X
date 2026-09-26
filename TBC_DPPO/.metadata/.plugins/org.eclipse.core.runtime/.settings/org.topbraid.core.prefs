@@ -1688,7 +1688,11 @@
 ///TopBraid/TBC/visual.ttl=true
 ///TopBraid/TBC/xhtml.ttl=true
 ///TopBraid/VERSION=true
-//SelectedResourcehttp\://w3id.org/dppo/ontology/dpp-info/=http\://w3id.org/dppo/ontology/dpp-info/
+//SelectedResourcehttp\://w3id.org/dppo/ontology/dpp-comp/=http\://w3id.org/dppo/ontology/dpp-core/Substance
+//SelectedResourcehttp\://w3id.org/dppo/ontology/dpp-core/=http\://w3id.org/dppo/ontology/dpp-core/
+//SelectedResourcehttp\://w3id.org/dppo/ontology/dpp-info/=http\://w3id.org/dppo/ontology/dpp-info/isAbout
 //SelectedResourcehttp\://w3id.org/dppo/ontology/dpp-odp/=http\://w3id.org/dppo/ontology/dpp-odp/
 //SelectedResourcehttp\://w3id.org/dppo/ontology/dpp-prov/=http\://w3id.org/dppo/ontology/dpp-prov/
+//SelectedResourcehttp\://www.owl-ontologies.com/ZXO\#=http\://www.owl-ontologies.com/ZXO\#
+//SelectedResourcehttps\://w3id.org/zirkular-x/ext=https\://w3id.org/zirkular-x/ext
 eclipse.preferences.version=1

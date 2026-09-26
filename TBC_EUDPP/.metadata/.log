@@ -745,3 +745,15 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.topbraid.core 1 0 2026-09-19 12:55:02.291
 !MESSAGE TopBraid Free Edition v6.0.1.v20180831-1223R: started (org.topbraidcomposer.editors.utils.TBCFEPersonality)
+!SESSION 2026-09-26 18:11:09.684 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.topbraid.core 2 0 2026-09-26 18:11:21.335
+!MESSAGE Your license does not cover graphStore: org.topbraid.shacltb.graphql.graphstore.GraphQLGraphStore. Please contact TopQuadrant for upgrade information.
+
+!ENTRY org.topbraid.core 1 0 2026-09-26 18:11:23.287
+!MESSAGE TopBraid Free Edition v6.0.1.v20180831-1223R: started (org.topbraidcomposer.editors.utils.TBCFEPersonality)
