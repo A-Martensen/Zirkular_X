@@ -1,0 +1,154 @@
+# baseURI: http://w3id.org/dppo/ontology/dpp-core/
+# imports: http://w3id.org/dppo/ontology/dpp-odp/
+
+@prefix : <http://w3id.org/dppo/ontology/dpp-core/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:contributor
+  rdf:type owl:AnnotationProperty ;
+.
+dcterms:created
+  rdf:type owl:AnnotationProperty ;
+.
+dcterms:creator
+  rdf:type owl:AnnotationProperty ;
+.
+dcterms:description
+  rdf:type owl:AnnotationProperty ;
+.
+dcterms:license
+  rdf:type owl:AnnotationProperty ;
+.
+dcterms:title
+  rdf:type owl:AnnotationProperty ;
+.
+vann:preferredNamespacePrefix
+  rdf:type owl:AnnotationProperty ;
+.
+vann:preferredNamespaceUri
+  rdf:type owl:AnnotationProperty ;
+.
+:
+  rdf:type owl:Ontology ;
+  dcterms:contributor "Eva Blomqvist" ;
+  dcterms:contributor "Huanyu Li" ;
+  dcterms:contributor "Robin Keskisärkkä" ;
+  dcterms:created "2023-10-30" ;
+  dcterms:creator "Maike Jansen" ;
+  dcterms:description "This is a minimal core ontology for DPPs, specialising the DPP ODP." ;
+  dcterms:license "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE" ;
+  dcterms:title "Core Digital Product Passport Ontology" ;
+  vann:preferredNamespacePrefix "dpp-core" ;
+  vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/dpp-core/" ;
+  rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
+  owl:imports dpp-odp: ;
+  owl:versionIRI <http://w3id.org/dppo/ontology/dpp-core/0.1/> ;
+  owl:versionInfo "0.1" ;
+.
+:Component
+  rdf:type owl:Class ;
+  rdfs:comment "A product that is a component of some other product."@en ;
+  rdfs:label "Component"@en ;
+  rdfs:subClassOf dpp-odp:Product ;
+.
+:ComponentDPP
+  rdf:type owl:Class ;
+  rdfs:comment "A DPP that describes a component."@en ;
+  rdfs:label "Component DPP"@en ;
+  rdfs:subClassOf dpp-odp:DPP ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          dpp-odp:DPP
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty dpp-odp:describes ;
+            owl:someValuesFrom :Component ;
+          ]
+        ) ;
+    ] ;
+.
+:ConsumerProduct
+  rdf:type owl:Class ;
+  rdfs:comment "A consumer product, i.e. a product that is sold directly to end users (consumers)."@en ;
+  rdfs:label "Consumer product"@en ;
+  rdfs:subClassOf dpp-odp:Product ;
+.
+:ConsumerProductDPP
+  rdf:type owl:Class ;
+  rdfs:comment "A DPP describing a consumer product."@en ;
+  rdfs:label "Comsumer Product DPP"@en ;
+  rdfs:subClassOf dpp-odp:DPP ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          dpp-odp:DPP
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty dpp-odp:describes ;
+            owl:someValuesFrom :ConsumerProduct ;
+          ]
+        ) ;
+    ] ;
+.
+:Material
+  rdf:type owl:Class ;
+  rdfs:comment "A material, that is sold as a product by the producer."@en ;
+  rdfs:label "Material"@en ;
+  rdfs:subClassOf dpp-odp:Product ;
+.
+:MaterialDPP
+  rdf:type owl:Class ;
+  rdfs:comment "A DPP describing a material."@en ;
+  rdfs:label "Material DPP"@en ;
+  rdfs:subClassOf dpp-odp:DPP ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          dpp-odp:DPP
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty dpp-odp:describes ;
+            owl:someValuesFrom :Material ;
+          ]
+        ) ;
+    ] ;
+.
+:Substance
+  rdf:type owl:Class ;
+  rdfs:comment "A substance, that is sold as a product by the producer."@en ;
+  rdfs:label "Substance"@en ;
+  rdfs:subClassOf dpp-odp:Product ;
+.
+:SubstanceDPP
+  rdf:type owl:Class ;
+  rdfs:comment "A DPP  describing a substance."@en ;
+  rdfs:label "Substance DPP"@en ;
+  rdfs:subClassOf dpp-odp:DPP ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          dpp-odp:DPP
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty dpp-odp:describes ;
+            owl:someValuesFrom :Substance ;
+          ]
+        ) ;
+    ] ;
+.
+dpp-odp:DPP
+  rdf:type owl:Class ;
+.
+dpp-odp:Product
+  rdf:type owl:Class ;
+.
+dpp-odp:describes
+  rdf:type owl:ObjectProperty ;
+.
