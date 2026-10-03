@@ -1,0 +1,37 @@
+# baseURI: https://w3id.org/zirkular-x-connect
+# imports: http://w3id.org/dppo/ontology/dpp-comp/
+# imports: http://w3id.org/dppo/ontology/dpp-core/
+# imports: http://w3id.org/dppo/ontology/dpp-info/
+# imports: http://w3id.org/dppo/ontology/dpp-odp/
+# imports: http://w3id.org/dppo/ontology/dpp-prov/
+# imports: https://w3id.org/dpp-id
+# imports: https://w3id.org/zirkular-x#
+# prefix: zirkular-x-connect
+
+@prefix dpp-comp: <http://w3id.org/dppo/ontology/dpp-comp/> .
+@prefix dpp-prov: <http://w3id.org/dppo/ontology/dpp-prov/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zirkular-x-connect: <https://w3id.org/zirkular-x-connect#> .
+
+<https://w3id.org/zirkular-x#DPP>
+  owl:equivalentClass <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
+.
+<https://w3id.org/zirkular-x-connect>
+  rdf:type owl:Ontology ;
+  owl:imports dpp-comp: ;
+  owl:imports <http://w3id.org/dppo/ontology/dpp-core/> ;
+  owl:imports <http://w3id.org/dppo/ontology/dpp-info/> ;
+  owl:imports <http://w3id.org/dppo/ontology/dpp-odp/> ;
+  owl:imports dpp-prov: ;
+  owl:imports <https://w3id.org/dpp-id> ;
+  owl:imports <https://w3id.org/zirkular-x#> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+zirkular-x-connect:hasID
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
+  rdfs:range <https://w3id.org/dpp-id#ID> ;
+.

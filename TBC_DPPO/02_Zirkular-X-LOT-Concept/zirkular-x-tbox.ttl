@@ -79,6 +79,7 @@ zx:Building
 zx:BuildingProduct
   rdf:type owl:Class ;
   rdfs:label "Building Product" ;
+  rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/Product> ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom zx:Building ;
