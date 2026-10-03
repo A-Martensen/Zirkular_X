@@ -1,0 +1,25 @@
+# baseURI: https://w3id.org/zirkular-x-dppo-extentions
+# imports: http://w3id.org/dppo/ontology/dpp-comp/
+# imports: http://w3id.org/dppo/ontology/dpp-core/
+# imports: http://w3id.org/dppo/ontology/dpp-info/
+# imports: http://w3id.org/dppo/ontology/dpp-odp/
+# imports: http://w3id.org/dppo/ontology/dpp-prov/
+# prefix: zirkular-x-dppo-extentions
+
+@prefix dpp-comp: <http://w3id.org/dppo/ontology/dpp-comp/> .
+@prefix dpp-prov: <http://w3id.org/dppo/ontology/dpp-prov/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zirkular-x-dppo-extentions: <https://w3id.org/zirkular-x-dppo-extentions#> .
+
+<https://w3id.org/zirkular-x-dppo-extentions>
+  rdf:type owl:Ontology ;
+  owl:imports dpp-comp: ;
+  owl:imports <http://w3id.org/dppo/ontology/dpp-core/> ;
+  owl:imports <http://w3id.org/dppo/ontology/dpp-info/> ;
+  owl:imports <http://w3id.org/dppo/ontology/dpp-odp/> ;
+  owl:imports dpp-prov: ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.

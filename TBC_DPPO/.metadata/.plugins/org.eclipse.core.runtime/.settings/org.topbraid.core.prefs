@@ -1689,10 +1689,15 @@
 ///TopBraid/TBC/xhtml.ttl=true
 ///TopBraid/VERSION=true
 //SelectedResourcehttp\://w3id.org/dppo/ontology/dpp-comp/=http\://w3id.org/dppo/ontology/dpp-core/Substance
-//SelectedResourcehttp\://w3id.org/dppo/ontology/dpp-core/=http\://w3id.org/dppo/ontology/dpp-core/
+//SelectedResourcehttp\://w3id.org/dppo/ontology/dpp-core/=http\://w3id.org/dppo/ontology/dpp-core/ComponentDPP
 //SelectedResourcehttp\://w3id.org/dppo/ontology/dpp-info/=http\://w3id.org/dppo/ontology/dpp-info/isAbout
 //SelectedResourcehttp\://w3id.org/dppo/ontology/dpp-odp/=http\://w3id.org/dppo/ontology/dpp-odp/
-//SelectedResourcehttp\://w3id.org/dppo/ontology/dpp-prov/=http\://w3id.org/dppo/ontology/dpp-prov/
+//SelectedResourcehttp\://w3id.org/dppo/ontology/dpp-prov/=http\://w3id.org/dppo/ontology/dpp-info/Unit
 //SelectedResourcehttp\://www.owl-ontologies.com/ZXO\#=http\://www.owl-ontologies.com/ZXO\#
+//SelectedResourcehttps\://w3id.org/dpp-id=https\://w3id.org/dpp-id\#ID
+//SelectedResourcehttps\://w3id.org/zirkular-x\#=https\://w3id.org/zirkular-x\#
+//SelectedResourcehttps\://w3id.org/zirkular-x-connector=http\://w3id.org/dppo/ontology/dpp-core/SubstanceDPP
+//SelectedResourcehttps\://w3id.org/zirkular-x-dppo-extentions=https\://w3id.org/zirkular-x-dppo-extentions
 //SelectedResourcehttps\://w3id.org/zirkular-x/ext=https\://w3id.org/zirkular-x/ext
+//Show-http_//www.w3.org/2002/07/owl\#NamedIndividual=true
 eclipse.preferences.version=1
