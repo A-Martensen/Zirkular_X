@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_kPX5wK4dEfGYkrzyydIvcA" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_kPX5wa4dEfGYkrzyydIvcA" bindingContexts="_kPZJCq4dEfGYkrzyydIvcA">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;zirkular-x-connect.ttl&quot; tooltip=&quot;01_Zirkular-X-LOT-Concept/zirkular-x-connect.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/01_Zirkular-X-LOT-Concept/zirkular-x-connect.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;zirkular-x-tbox.ttl&quot; tooltip=&quot;01_Zirkular-X-LOT-Concept/zirkular-x-tbox.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/01_Zirkular-X-LOT-Concept/zirkular-x-tbox.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;zirkular-x-connector.ttl&quot; tooltip=&quot;01_Zirkular-X-LOT-Concept/zirkular-x-connector.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/01_Zirkular-X-LOT-Concept/zirkular-x-connector.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.ResourceEditor&quot; name=&quot;dpp-id.ttl&quot; tooltip=&quot;001_DPPO_EXT/dpp-id.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/001_DPPO_EXT/dpp-id.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.ResourceEditor&quot; name=&quot;dpp-prov.ttl&quot; tooltip=&quot;00_DPPO/dpp-prov.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/00_DPPO/dpp-prov.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.ResourceEditor&quot; name=&quot;dpp-core.ttl&quot; tooltip=&quot;00_DPPO/dpp-core.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/00_DPPO/dpp-core.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;dpp-odp.ttl&quot; tooltip=&quot;00_DPPO/dpp-odp.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/00_DPPO/dpp-odp.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;zirkular-x-dppo-extentions.ttl&quot; tooltip=&quot;01_Zirkular-X-LOT-Concept/zirkular-x-dppo-extentions.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/01_Zirkular-X-LOT-Concept/zirkular-x-dppo-extentions.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;dpp-info.ttl&quot; tooltip=&quot;00_DPPO/dpp-info.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/00_DPPO/dpp-info.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.ResourceEditor&quot; name=&quot;dpp-comp.ttl&quot; tooltip=&quot;00_DPPO/dpp-comp.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/00_DPPO/dpp-comp.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.ResourceEditor&quot; name=&quot;zirkular-x-connector.ttl&quot; tooltip=&quot;Zirkular-X-LOT-Concept/zirkular-x-connector.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Zirkular-X-LOT-Concept/zirkular-x-connector.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;demo.ttl&quot; tooltip=&quot;260921_Yusra/demo.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/260921_Yusra/demo.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;zx-dppo-conn.ttl&quot; tooltip=&quot;260921_Yusra/zx-dppo-conn.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/260921_Yusra/zx-dppo-conn.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.ResourceEditor&quot; name=&quot;zx-core.ttl&quot; tooltip=&quot;260921_Yusra/zx-core.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/260921_Yusra/zx-core.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;ontology(4).ttl&quot; tooltip=&quot;tst/ontology(4).ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/tst/ontology(4).ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.ResourceEditor&quot; name=&quot;Example2_2.ttl&quot; tooltip=&quot;03_Example/Example2_2.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/03_Example/Example2_2.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;Example2.ttl&quot; tooltip=&quot;03_Example/Example2.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/03_Example/Example2.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;zirkular-x-connect.ttl&quot; tooltip=&quot;01_Zirkular-X-LOT-Concept/zirkular-x-connect.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/01_Zirkular-X-LOT-Concept/zirkular-x-connect.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;zirkular-x-tbox.ttl&quot; tooltip=&quot;01_Zirkular-X-LOT-Concept/zirkular-x-tbox.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/01_Zirkular-X-LOT-Concept/zirkular-x-tbox.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;zirkular-x-connector.ttl&quot; tooltip=&quot;01_Zirkular-X-LOT-Concept/zirkular-x-connector.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/01_Zirkular-X-LOT-Concept/zirkular-x-connector.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.ResourceEditor&quot; name=&quot;dpp-id.ttl&quot; tooltip=&quot;001_DPPO_EXT/dpp-id.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/001_DPPO_EXT/dpp-id.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.ResourceEditor&quot; name=&quot;dpp-prov.ttl&quot; tooltip=&quot;00_DPPO/dpp-prov.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/00_DPPO/dpp-prov.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.ResourceEditor&quot; name=&quot;dpp-core.ttl&quot; tooltip=&quot;00_DPPO/dpp-core.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/00_DPPO/dpp-core.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;dpp-odp.ttl&quot; tooltip=&quot;00_DPPO/dpp-odp.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/00_DPPO/dpp-odp.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;zirkular-x-dppo-extentions.ttl&quot; tooltip=&quot;01_Zirkular-X-LOT-Concept/zirkular-x-dppo-extentions.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/01_Zirkular-X-LOT-Concept/zirkular-x-dppo-extentions.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;dpp-info.ttl&quot; tooltip=&quot;00_DPPO/dpp-info.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/00_DPPO/dpp-info.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.ResourceEditor&quot; name=&quot;dpp-comp.ttl&quot; tooltip=&quot;00_DPPO/dpp-comp.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/00_DPPO/dpp-comp.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.ResourceEditor&quot; name=&quot;zirkular-x-connector.ttl&quot; tooltip=&quot;Zirkular-X-LOT-Concept/zirkular-x-connector.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Zirkular-X-LOT-Concept/zirkular-x-connector.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;demo.ttl&quot; tooltip=&quot;260921_Yusra/demo.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/260921_Yusra/demo.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.topbraidcomposer.editors.N3ResourceEditor&quot; name=&quot;zx-dppo-conn.ttl&quot; tooltip=&quot;260921_Yusra/zx-dppo-conn.ttl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/260921_Yusra/zx-dppo-conn.ttl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_kPX5wa4dEfGYkrzyydIvcA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_kPX5wq4dEfGYkrzyydIvcA" x="-1029" y="-17" width="1024" height="768">
@@ -107,27 +107,27 @@
           <tags>persp.newWizSC:org.topbraidcomposer.shacl.wizards.createTestCases</tags>
           <tags>persp.newWizSC:org.eclipse.ui.wizards.new.folder</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_kPX50q4dEfGYkrzyydIvcA" selectedElement="_kPX5264dEfGYkrzyydIvcA" horizontal="true">
-            <children xsi:type="basic:PartSashContainer" xmi:id="_kPX5064dEfGYkrzyydIvcA" containerData="4429" selectedElement="_kPX52K4dEfGYkrzyydIvcA">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_kPX5064dEfGYkrzyydIvcA" containerData="4429" selectedElement="_kPX51K4dEfGYkrzyydIvcA">
               <children xsi:type="basic:PartStack" xmi:id="_kPX51K4dEfGYkrzyydIvcA" elementId="topLeft" containerData="7114" selectedElement="_kPX51a4dEfGYkrzyydIvcA">
+                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_kPX51a4dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.navigation.subclassestree" ref="_kPYhbq4dEfGYkrzyydIvcA"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_kPX51q4dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.navigation.arbitree" toBeRendered="false" ref="_kPYhea4dEfGYkrzyydIvcA"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_kPX5164dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.shacl.views.shapes" toBeRendered="false" ref="_kPYheq4dEfGYkrzyydIvcA"/>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_kPX52K4dEfGYkrzyydIvcA" elementId="bottomLeft" containerData="2886" selectedElement="_kPX52a4dEfGYkrzyydIvcA">
-                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_kPX52a4dEfGYkrzyydIvcA" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_kPYhSq4dEfGYkrzyydIvcA"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_kPX52q4dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.ui.views.basket" ref="_kPZIEq4dEfGYkrzyydIvcA"/>
               </children>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_kPX5264dEfGYkrzyydIvcA" containerData="5571" selectedElement="_kPX54a4dEfGYkrzyydIvcA">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_kPX53K4dEfGYkrzyydIvcA" containerData="6729" selectedElement="_kPX53a4dEfGYkrzyydIvcA" horizontal="true">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_kPX53K4dEfGYkrzyydIvcA" containerData="7969" selectedElement="_kPX53q4dEfGYkrzyydIvcA" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_kPX53a4dEfGYkrzyydIvcA" elementId="org.eclipse.ui.editorss" containerData="5632" ref="_kPYhQq4dEfGYkrzyydIvcA"/>
                 <children xsi:type="basic:PartStack" xmi:id="_kPX53q4dEfGYkrzyydIvcA" elementId="topRight" containerData="4368" selectedElement="_kPX5364dEfGYkrzyydIvcA">
                   <children xsi:type="advanced:Placeholder" xmi:id="_kPX5364dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.navigation.propertiestree" ref="_kPZIFq4dEfGYkrzyydIvcA"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_kPX54K4dEfGYkrzyydIvcA" elementId="org.eclipse.ui.views.ContentOutline" toBeRendered="false" ref="_kPYhaK4dEfGYkrzyydIvcA"/>
                 </children>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_kPX54a4dEfGYkrzyydIvcA" elementId="bottomCenter" containerData="3271" selectedElement="_kPX56K4dEfGYkrzyydIvcA">
+              <children xsi:type="basic:PartStack" xmi:id="_kPX54a4dEfGYkrzyydIvcA" elementId="bottomCenter" containerData="2031" selectedElement="_kPX56K4dEfGYkrzyydIvcA">
                 <children xsi:type="advanced:Placeholder" xmi:id="_kPX54q4dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.navigation.imports" ref="_kPYhe64dEfGYkrzyydIvcA"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_kPX5464dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.navigation.instances" ref="_kPYhf64dEfGYkrzyydIvcA"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_kPX55K4dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.navigation.inheritance" toBeRendered="false" ref="_kPYhg64dEfGYkrzyydIvcA"/>
@@ -185,9 +185,15 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_kPYhQq4dEfGYkrzyydIvcA" elementId="org.eclipse.ui.editorss" selectedElement="_kPYhQ64dEfGYkrzyydIvcA">
-      <children xsi:type="basic:PartStack" xmi:id="_kPYhQ64dEfGYkrzyydIvcA" elementId="org.eclipse.e4.primaryDataStack">
+      <children xsi:type="basic:PartStack" xmi:id="_kPYhQ64dEfGYkrzyydIvcA" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_Ey1SML9nEfGGivCYjoQ_bw">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
+        <children xsi:type="basic:Part" xmi:id="_Ey1SML9nEfGGivCYjoQ_bw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Example2_2.ttl" iconURI="platform:/plugin/org.topbraidcomposer.editors/icons/File.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.topbraidcomposer.editors.ResourceEditor&quot; name=&quot;Example2_2.ttl&quot; partName=&quot;Example2_2.ttl&quot; title=&quot;Example2_2.ttl&quot; tooltip=&quot;03_Example/Example2_2.ttl&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/03_Example/Example2_2.ttl&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.topbraidcomposer.editors.ResourceEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
       </children>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_kPYhSq4dEfGYkrzyydIvcA" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Project Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/icons/full/eview16/resource_persp.gif" tooltip="" closeable="true">
@@ -196,8 +202,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_kPYhS64dEfGYkrzyydIvcA" elementId="org.eclipse.ui.navigator.ProjectExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -254,6 +258,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:TopBraid</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_kPYhb64dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.navigation.subclassestree">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -529,22 +535,22 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kPZIIq4dEfGYkrzyydIvcA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_DKw3R79eEfGOnNIctm1_TQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_kPaXWK4dEfGYkrzyydIvcA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_T0qBtL9eEfGGivCYjoQ_bw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_kPaXWK4dEfGYkrzyydIvcA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kPZIL64dEfGYkrzyydIvcA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
         <children xsi:type="menu:ToolBarSeparator" xmi:id="_kPZIMK4dEfGYkrzyydIvcA" elementId="additions" toBeRendered="false"/>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_kPZIMa4dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.editors.actions" visible="false">
+      <children xsi:type="menu:ToolBar" xmi:id="_kPZIMa4dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.editors.actions">
         <tags>Draggable</tags>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_kPZIOK4dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.inference.actionSet" visible="false">
+      <children xsi:type="menu:ToolBar" xmi:id="_kPZIOK4dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.inference.actionSet">
         <tags>Draggable</tags>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_kPZIP64dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.markers.actionSet" visible="false">
+      <children xsi:type="menu:ToolBar" xmi:id="_kPZIP64dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.markers.actionSet">
         <tags>Draggable</tags>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_kPZIRq4dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.spin.actionSet" visible="false">
+      <children xsi:type="menu:ToolBar" xmi:id="_kPZIRq4dEfGYkrzyydIvcA" elementId="org.topbraidcomposer.spin.actionSet">
         <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kPZIS64dEfGYkrzyydIvcA" elementId="group.nav" toBeRendered="false">
@@ -553,7 +559,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kPZITa4dEfGYkrzyydIvcA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_DKw3Ub9eEfGOnNIctm1_TQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_kPaWya4dEfGYkrzyydIvcA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_T0r25L9eEfGGivCYjoQ_bw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_kPaWya4dEfGYkrzyydIvcA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kPZIXq4dEfGYkrzyydIvcA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

@@ -1,0 +1,408 @@
+# baseURI: https://w3id.org/Example2
+# imports: https://w3id.org/zirkular-x-connect
+# prefix: Example2
+
+# Example 2 of the parameter list (central AHU, X-CUBE). Every parameter with a
+# value in column "Beispiel 2" is covered. Markers in the comments below:
+#   GAP      value exists in the list, no fitting term in zx / dpp-id / DPPO, not asserted
+#   STOPGAP  value asserted with a term from outside the zx TBox
+#   CHECK    asserted the way the TBox demands, but the fit is questionable
+#   EMPTY    no value for example 2 in the list, nothing asserted
+# Turtle comments do not survive a save from TopBraid Composer or Protege.
+
+@prefix Example2: <https://w3id.org/Example2#> .
+@prefix dpp-core: <http://w3id.org/dppo/ontology/dpp-core/> .
+@prefix dpp-id: <https://w3id.org/dpp-id#> .
+@prefix dpp-info: <http://w3id.org/dppo/ontology/dpp-info/> .
+@prefix dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zirkular-x-connect: <https://w3id.org/zirkular-x-connect#> .
+@prefix zx: <https://w3id.org/zirkular-x#> .
+
+<https://w3id.org/Example2>
+  rdf:type owl:Ontology ;
+  owl:imports <https://w3id.org/zirkular-x-connect> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+
+#################################################################
+#    DPP and identifier (unchanged from the original file)
+#################################################################
+
+# Produktkennung stays where the original put it: on the DPP via
+# zirkular-x-connect:hasID. zx:productCode and zx:hasIdentifier are not used.
+Example2:DPP1
+  rdf:type dpp-core:ConsumerProductDPP ;
+  dpp-odp:describes Example2:Lueftung ;
+  zirkular-x-connect:hasID Example2:ID1 ;
+.
+Example2:ID1
+  rdf:type dpp-id:ID ;
+  dpp-id:hasGranularity dpp-id:Item ;
+  dpp-id:hasUniqueIndentifier "X-AIR-12.5-A-08-11942" ;
+.
+
+#################################################################
+#    Product
+#################################################################
+
+Example2:Lueftung
+  rdf:type dpp-core:ConsumerProduct ;
+  rdf:type zx:HVACProduct ;
+
+  # --- Produktinformationen ---
+  # STOPGAP Produktname: no zx property, rdfs:label used
+  rdfs:label "X-CUBE" ;
+  # EMPTY BauPVO-Code ("keine Angabe"), zx:baupvoCode not asserted
+  zx:din276Code "431" ;
+  zx:intendedUse zx:btOffice ;
+  zx:intendedUser "Unterwiesene Person" ;
+  zx:useConditions "Betriebstemperatur" ;
+  zx:useConditions "Innenliegend" ;
+  zx:useConditions "Luftfeuchtigkeit" ;
+  zx:avgServiceLife 25 ;
+  zx:minServiceLife 15 ;
+  # EMPTY Nennabmessung (header row only), zx:nominalDimension not asserted
+  zx:length "1600"^^xsd:decimal ;
+  # CHECK the list says "Breite", so zx:width. The original file had zx:depth.
+  zx:width "1600"^^xsd:decimal ;
+  zx:height "1800"^^xsd:decimal ;
+  zx:weight "2500"^^xsd:decimal ;
+  zx:productCategory "Zentrale RLT-Anlage" ;
+  # CHECK the list says "Verbesserung durchgeführt (Datum)", no date is given
+  zx:status "Verbesserung durchgeführt" ;
+  zx:hasManufacturer Example2:Manufacturer1 ;
+  zx:hasLifecycleEvent Example2:StartOfLife1 ;
+  zx:hasLifecycleEvent Example2:Disassembly1 ;
+  zx:hasLifecycleEvent Example2:Maintenance1 ;
+
+  # --- Materialinformationen ---
+  zx:hasMaterialComposition Example2:Comp_Stahlblech ;
+  zx:hasMaterialComposition Example2:Comp_Aluminium ;
+  zx:hasMaterialComposition Example2:Comp_Kupfer ;
+  zx:hasMaterialComposition Example2:Comp_Mineralwolle ;
+  zx:hasMaterialComposition Example2:Comp_Kunststoffe ;
+  zx:hasMaterialComposition Example2:Comp_Elektronik ;
+  # CHECK the list says "Ja ->" without naming the substances, only the flag fits
+  zx:containsHazardousSubstances true ;
+  # EMPTY kritische Rohstoffe, Rezyklatgehalt
+  zx:renewableContent 0.10 ;
+  zx:reusedContent 0.15 ;
+  zx:separableContent 1.0 ;
+  zx:biodegradableContent 0.20 ;
+
+  # --- Nutzerinformationen & Anleitungen ---
+  zx:hasEOLRecs Example2:EOLRecs1 ;
+  # EMPTY Demontageempfehlungen, Reparaturempfehlungen
+  zx:hasUsageInst Example2:UsageInst1 ;
+  zx:hasInstallationInst Example2:InstallationInst1 ;
+  # CHECK these seven are xsd:string in the TBox, the list holds links.
+  #       zx:SafetyInst and zx:CompDesc exist but no parameter property leads there.
+  zx:potentialRisks "https://docuportal.troxgroup.com/w/de_DE/show/abb4fb2f2506416f5fca92d9621439f1_6_de_DE?ct=821a43d43a3acff20a020142246666fe_6_de_DE" ;
+  zx:failureProcedure "www.Link-Herstellerinformationen.de" ;
+  zx:protectiveMeasures "www.Link-Herstellerinformationen.de" ;
+  zx:fireSafetyInfo "www.Link-Herstellerinformationen.de" ;
+  zx:softwareCompatibility "www.Link-Herstellerinformationen.de" ;
+  zx:materialCompatibility "www.Link-Herstellerinformationen.de" ;
+  zx:emcCharacteristics "www.Link-Herstellerinformationen.de" ;
+
+  # --- Compliance: EMPTY (all four parameters) ---
+  # --- Oekobilanzdaten: EMPTY (all indicators) ---
+
+  # --- Gebaeude ---
+  zx:isLocatedInBuilding Example2:GEB-ZENTRALE-01 ;
+  zx:isLocatedInRoom Example2:RM-401 ;
+  zx:isPartOfSystem Example2:RLT-Anlage-01 ;
+
+  # --- Technische Daten ---
+  # EMPTY wesentliche Merkmale, Energieeffizienzklasse, andere Einstufungen, Nennleistung
+  zx:hasProductProperty Example2:Prop_Volumenstrom ;
+  zx:hasProductProperty Example2:Prop_Luftgeschwindigkeit ;
+  zx:hasProductProperty Example2:Prop_MechanischeStabilitaet ;
+  zx:hasProductProperty Example2:Prop_Gehaeuseleckluftrate ;
+  zx:hasProductProperty Example2:Prop_Waermedurchgang ;
+  zx:hasProductProperty Example2:Prop_Waermebrueckenfaktor ;
+
+  # --- Lebenszyklusinformationen ---
+  # GAP Baujahr (12/05/2014): the only candidate, zx:constructionDate, has domain
+  #     zx:Building and would type the product as a building.
+  # GAP Betriebsdauer (12 Jahre): zx:operatingHours is defined in hours. Converting
+  #     years to hours needs an assumption about run time, so nothing is asserted.
+  # EMPTY Wartungsstatus (the list shows the enumeration, not a value)
+
+  # --- Sub-Bauteile/Komponenten ---
+  zx:consistsOf Example2:Filtereinheit ;
+  zx:consistsOf Example2:Ventilator ;
+  zx:consistsOf Example2:Schalldaempfer ;
+  zx:consistsOf Example2:Jalousieklappe ;
+  zx:consistsOf Example2:Kuehler ;
+  zx:consistsOf Example2:Erhitzer ;
+  zx:consistsOf Example2:Waermeuebertrager ;
+  zx:consistsOf Example2:Kreislaufverbundsystem ;
+  zx:consistsOf Example2:Befeuchter ;
+  zx:consistsOf Example2:Schaltschrank ;
+  zx:consistsOf Example2:Gehaeuse ;
+.
+
+#################################################################
+#    Manufacturer
+#################################################################
+
+# STOPGAP no property in the TBox has zx:Manufacturer as its domain: no name,
+#         no contact data, no link to the address. schema.org terms are used.
+#         They are not declared anywhere in the import closure.
+Example2:Manufacturer1
+  rdf:type zx:Manufacturer ;
+  schema:name "muster GmbH" ;
+  schema:address Example2:Address1 ;
+  schema:telephone "+49 (0)12345678" ;
+  schema:email "muster@web.de" ;
+  schema:url "www.RLT-Anlage.de" ;
+.
+Example2:Address1
+  rdf:type schema:PostalAddress ;
+  zx:city "Musterstadt" ;
+  zx:postalCode "12345" ;
+  zx:street "Musterstraße" ;
+  zx:houseNumber "12" ;
+.
+
+#################################################################
+#    Lifecycle events
+#################################################################
+
+# CHECK dates are read as DD/MM/YYYY. zx:hasTimeDate is xsd:dateTime, the list
+#       only gives dates, so T00:00:00 is padding.
+# CHECK source data: production (12/04/2015) lies after the last disassembly
+#       (12/05/2014).
+# zx:performedBy is not asserted: the list does not say who performed the production.
+Example2:StartOfLife1
+  rdf:type zx:StartOfLife ;
+  zx:hasProductionLocation "Musterstadt, Deutschland" ;
+  zx:hasTimeDate "2015-04-12T00:00:00"^^xsd:dateTime ;
+.
+Example2:Disassembly1
+  rdf:type zx:Disassembly ;
+  zx:disassemblyLocation "Musterstadt, Deutschland" ;
+  zx:hasTimeDate "2014-05-12T00:00:00"^^xsd:dateTime ;
+.
+# CHECK zx:Maintenance is a lifecycle event. The two list rows are maintenance
+#       instructions (links), not an event that took place.
+Example2:Maintenance1
+  rdf:type zx:Maintenance ;
+  zx:maintenanceDescription "www.Link-Herstellerinformationen.de" ;
+  zx:maintenanceFrequency "www.Link-Herstellerinformationen.de" ;
+.
+
+#################################################################
+#    Material composition
+#################################################################
+
+# STOPGAP zx:MaterialComposition has no property for the share and zx:Material
+#         has none for its name. dpp-info:value (declared without domain) carries
+#         the mass fraction 0-1, rdfs:label the name.
+Example2:Comp_Stahlblech
+  rdf:type zx:MaterialComposition ;
+  zx:consistsOfMaterial Example2:Mat_Stahlblech ;
+  dpp-info:value 0.68 ;
+.
+Example2:Comp_Aluminium
+  rdf:type zx:MaterialComposition ;
+  zx:consistsOfMaterial Example2:Mat_Aluminium ;
+  dpp-info:value 0.14 ;
+.
+Example2:Comp_Kupfer
+  rdf:type zx:MaterialComposition ;
+  zx:consistsOfMaterial Example2:Mat_Kupfer ;
+  dpp-info:value 0.03 ;
+.
+Example2:Comp_Mineralwolle
+  rdf:type zx:MaterialComposition ;
+  zx:consistsOfMaterial Example2:Mat_Mineralwolle ;
+  dpp-info:value 0.09 ;
+.
+Example2:Comp_Kunststoffe
+  rdf:type zx:MaterialComposition ;
+  zx:consistsOfMaterial Example2:Mat_Kunststoffe ;
+  dpp-info:value 0.04 ;
+.
+Example2:Comp_Elektronik
+  rdf:type zx:MaterialComposition ;
+  zx:consistsOfMaterial Example2:Mat_Elektronik ;
+  dpp-info:value 0.02 ;
+.
+Example2:Mat_Stahlblech
+  rdf:type zx:Material ;
+  rdfs:label "Verzinktes Stahlblech" ;
+  rdfs:comment "Pulverbeschichtet, Gehäusewände" ;
+.
+Example2:Mat_Aluminium
+  rdf:type zx:Material ;
+  rdfs:label "Aluminium" ;
+  rdfs:comment "Rahmenprofile, Rotorstruktur" ;
+.
+Example2:Mat_Kupfer
+  rdf:type zx:Material ;
+  rdfs:label "Kupfer" ;
+  rdfs:comment "Registerrohre" ;
+.
+Example2:Mat_Mineralwolle
+  rdf:type zx:Material ;
+  rdfs:label "Mineralwolle" ;
+  rdfs:comment "Gehäusedämmung, nicht brennbar, 50 mm Wandstärke" ;
+.
+Example2:Mat_Kunststoffe
+  rdf:type zx:Material ;
+  rdfs:label "Kunststoffe/Elastomere" ;
+  rdfs:comment "Dichtungen, Filterrahmen, Griffe" ;
+.
+Example2:Mat_Elektronik
+  rdf:type zx:Material ;
+  rdfs:label "Elektronik / Leistungshalbleiter" ;
+  rdfs:comment "Motoren, Umrichter" ;
+.
+
+#################################################################
+#    Product documentation
+#################################################################
+
+# CHECK URLs are taken verbatim from the list (placeholders without scheme)
+Example2:EOLRecs1
+  rdf:type zx:EOLRecs ;
+  zx:documentURI "www.Link-Herstellerinformationen.de"^^xsd:anyURI ;
+.
+Example2:UsageInst1
+  rdf:type zx:UsageInst ;
+  zx:documentURI "www.Link-Herstellerinformationen.de"^^xsd:anyURI ;
+.
+Example2:InstallationInst1
+  rdf:type zx:InstallationInst ;
+  zx:documentURI "www.Link-Herstellerinformationen.de"^^xsd:anyURI ;
+.
+
+#################################################################
+#    Building, room, system
+#################################################################
+
+# STOPGAP no property in the TBox has zx:Building, zx:Room or zx:BuildingSystem
+#         as its domain for an ID or a name. The ID is the IRI local name plus
+#         rdfs:label. Room and system are not linked to the building.
+# EMPTY Baujahr (zx:constructionDate), Klassifikation (zx:buildingClassification)
+Example2:GEB-ZENTRALE-01
+  rdf:type zx:Building ;
+  rdfs:label "GEB-ZENTRALE-01" ;
+  zx:hasBuildingType zx:btOffice ;
+.
+Example2:RM-401
+  rdf:type zx:Room ;
+  rdfs:label "RM-401" ;
+.
+Example2:RLT-Anlage-01
+  rdf:type zx:BuildingSystem ;
+  rdfs:label "RLT-Anlage 01" ;
+.
+
+#################################################################
+#    Technical data
+#################################################################
+
+Example2:Prop_Volumenstrom
+  rdf:type zx:ProductProperty ;
+  rdfs:label "Volumenstrom" ;
+  zx:volumeFlow "12500"^^xsd:decimal ;
+  zx:unit "m³/h" ;
+.
+Example2:Prop_Luftgeschwindigkeit
+  rdf:type zx:ProductProperty ;
+  rdfs:label "Luftgeschwindigkeit" ;
+  zx:airVelocity 2.0 ;
+  zx:unit "m/s" ;
+.
+# CHECK the four EN 1886 classes all go through zx:classificationValue. Which
+#       characteristic a value belongs to is only visible in rdfs:label.
+Example2:Prop_MechanischeStabilitaet
+  rdf:type zx:ProductProperty ;
+  rdfs:label "Mechanische Stabilität" ;
+  zx:classificationValue "D1" ;
+.
+Example2:Prop_Gehaeuseleckluftrate
+  rdf:type zx:ProductProperty ;
+  rdfs:label "Gehäuse-Leckluftrate" ;
+  zx:classificationValue "L1" ;
+.
+Example2:Prop_Waermedurchgang
+  rdf:type zx:ProductProperty ;
+  rdfs:label "Wärmedurchgang" ;
+  zx:classificationValue "T2" ;
+.
+Example2:Prop_Waermebrueckenfaktor
+  rdf:type zx:ProductProperty ;
+  rdfs:label "Wärmebrückenfaktor" ;
+  zx:classificationValue "TB2" ;
+.
+
+#################################################################
+#    Sub-components
+#################################################################
+
+# Typed dpp-core:Component in parallel to dpp-core:ConsumerProduct on the main
+# product. zx:consistsOf is not aligned with dpp-odp:hasPart.
+Example2:Filtereinheit
+  rdf:type dpp-core:Component ;
+  rdf:type zx:BuildingProduct ;
+  rdfs:label "Filtereinheit" ;
+.
+Example2:Ventilator
+  rdf:type dpp-core:Component ;
+  rdf:type zx:BuildingProduct ;
+  rdfs:label "Ventilator" ;
+.
+Example2:Schalldaempfer
+  rdf:type dpp-core:Component ;
+  rdf:type zx:BuildingProduct ;
+  rdfs:label "Schalldämpfer" ;
+.
+Example2:Jalousieklappe
+  rdf:type dpp-core:Component ;
+  rdf:type zx:BuildingProduct ;
+  rdfs:label "Jalousieklappe" ;
+.
+Example2:Kuehler
+  rdf:type dpp-core:Component ;
+  rdf:type zx:BuildingProduct ;
+  rdfs:label "Kühler" ;
+.
+Example2:Erhitzer
+  rdf:type dpp-core:Component ;
+  rdf:type zx:BuildingProduct ;
+  rdfs:label "Erhitzer" ;
+.
+Example2:Waermeuebertrager
+  rdf:type dpp-core:Component ;
+  rdf:type zx:BuildingProduct ;
+  rdfs:label "Wärmeübertrager" ;
+.
+Example2:Kreislaufverbundsystem
+  rdf:type dpp-core:Component ;
+  rdf:type zx:BuildingProduct ;
+  rdfs:label "Kreislaufverbundsystem" ;
+.
+Example2:Befeuchter
+  rdf:type dpp-core:Component ;
+  rdf:type zx:BuildingProduct ;
+  rdfs:label "Befeuchter" ;
+.
+Example2:Schaltschrank
+  rdf:type dpp-core:Component ;
+  rdf:type zx:BuildingProduct ;
+  rdfs:label "Schaltschrank" ;
+.
+Example2:Gehaeuse
+  rdf:type dpp-core:Component ;
+  rdf:type zx:BuildingProduct ;
+  rdfs:label "Gehäuse" ;
+.

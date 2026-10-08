@@ -1,0 +1,39 @@
+# baseURI: https://w3id.org/Example2
+# imports: https://w3id.org/zirkular-x-connect
+# prefix: Example2
+
+@prefix Example2: <https://w3id.org/Example2#> .
+@prefix dpp-core: <http://w3id.org/dppo/ontology/dpp-core/> .
+@prefix dpp-id: <https://w3id.org/dpp-id#> .
+@prefix dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zirkular-x-connect: <https://w3id.org/zirkular-x-connect#> .
+@prefix zx: <https://w3id.org/zirkular-x#> .
+
+<https://w3id.org/Example2>
+  rdf:type owl:Ontology ;
+  owl:imports <https://w3id.org/zirkular-x-connect> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+Example2:DPP1
+  rdf:type dpp-core:ConsumerProductDPP ;
+  dpp-odp:describes Example2:Lueftung ;
+  zirkular-x-connect:hasID Example2:ID1 ;
+.
+Example2:ID1
+  rdf:type dpp-id:ID ;
+  dpp-id:hasGranularity dpp-id:Item ;
+  dpp-id:hasUniqueIndentifier "X-AIR-12.5-A-08-11942" ;
+.
+Example2:Lueftung
+  rdf:type dpp-core:ConsumerProduct ;
+  rdf:type zx:HVACProduct ;
+  zx:avgServiceLife 25 ;
+  zx:depth "1600"^^xsd:decimal ;
+  zx:din276Code "431" ;
+  zx:height "1800"^^xsd:decimal ;
+  zx:length "1600"^^xsd:decimal ;
+.
